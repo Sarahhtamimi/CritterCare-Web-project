@@ -756,6 +756,12 @@ body{
     font-weight: 700; 
     font-family: inherit; 
 }
+.staff-role{
+  text-align: center;
+    font-size: 1rem;
+    color: #555;
+    margin-top: 5px;
+}
 .about-title::after {
    content: "";
     display: block;
