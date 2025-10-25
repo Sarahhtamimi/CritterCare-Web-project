@@ -1,5 +1,7 @@
 /*موحد*/
-
+*{
+  font-family: "Poppins", Arial, sans-serif;
+}
 
 
 /*==========HEADER==========*/
@@ -62,13 +64,18 @@ footer{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 20px 60px;
+	padding: 20px 0px;
 	background-color: #7C6BA1;
 	color: white;
 	border-top: 1px solid rgba(255,255,255,.35);
 	border-bottom: 1px solid rgba(255, 255, 255, .2);
 	gap: 48px;
 	min-height: 110px;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .footer-left, .footer-right {
 	display: flex;
@@ -783,17 +790,16 @@ body{
     color: rgb(34, 7, 42);
 }
 .staff-name a:hover{
-    transform: translateY(5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    background-color: rgba(209, 169, 209, 0.32);
-    font-size: larger;
+    text-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    font-size: 20px;
 }
 .staff-photo a:hover{
-    transform: translateY(5px);
+    transform: translateY( -5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 .member a:visited{
     color: rgb(82, 17, 101);
+   
 }
 .staff-photo{
   width: 160px;
@@ -877,19 +883,29 @@ div.staff-member img{
    
  }
 table{
+  display: block;
 	font-family: "Poppins", Arial, sans-serif;
-	margin: 20px;
+	margin: 20px 20px 50px 20px; 
 	border: 1px solid #272525;
+  overflow-x: auto;
 }
 thead{
 	background-color: #3e2e48;
 	color: white;
-	text-align: center;
+	text-align: left
 }
 th, td{
-	padding: 10px 15px;
-	border: 1px solid #2d2b2b;
+	border: 0.5px solid #3e2e48;
 	text-align: center;
+  margin: 0px 20px 0px 20px ;
+  padding: 10px 10px 10px 10px ;
+}
+.skills-edu-cells{
+  padding-right: 5px;
+  padding-left: 20px;
+}
+td{
+  background-color: #ece4f79f;
 }
 .profile-link{
 	display: inline-block;
@@ -900,19 +916,31 @@ th, td{
 	text-decoration: none;
   border-radius: 4px;
 }
-table dl{
-  text-align: left;
-}
-table dl dt dd{
-  list-style-type: circle;
-}
 table a{
   color: rgb(53, 36, 59);
   text-decoration: none;
+  
 }
 table a:hover{
   text-decoration: underline;
   background-color: rgba(209, 169, 209, 0.32);
+}
+.profile-list{
+  text-align: left;
+  margin: 0px 30px 0px 2px;
+  padding: 0px 20px 0px 3px;
+  line-height: 1.3;
+}
+td ul{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+td ul li{
+  flex: 1 1 45%;
+  padding: 4px 8px;
+  border-radius: 4px;
 }
 
 /* ====== Customer dashboard ====== */
