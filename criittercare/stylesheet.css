@@ -3,6 +3,10 @@
   font-family: 'Times New Roman', serif;
 }
 
+.price {
+  color: #ffffff;
+
+}
 
 /*==========HEADER==========*/
 header{
@@ -566,6 +570,69 @@ body{
 
 .faq-toggle:checked ~ .faq-question {
   background-color: #f8f6ff;
+}
+
+/* FAQ Form Styles */
+.add-faq-form {
+  max-width: 750px;
+  margin: 30px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-form-title {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.faq-form-group {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #7C6BA1;
+}
+
+.faq-form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #2c3e50;
+  font-size: 1.1rem;
+}
+
+.faq-form-input {
+  width: 90%;
+  padding: 12px;
+  border: 2px solid #e9ecef;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #555;
+  background: white;
+}
+
+.faq-form-input:focus {
+  outline: none;
+  border-color: #6a11cb;
+}
+
+.faq-submit-btn {
+  background: #7C6BA1;
+  color: white;
+  border: none;
+  padding: 12px 40px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+  margin: 30px auto 0;
+  transition: all 0.3s ease;
 }
 
 
