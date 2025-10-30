@@ -617,7 +617,7 @@ body{
   border-color: #6a11cb;
 }
 
-.faq-submit-btn {
+#faq-submit {
   background: #7C6BA1;
   color: white;
   border: none;
@@ -631,6 +631,14 @@ body{
   transition: all 0.3s ease;
 }
 
+#faq-submit:hover {
+  transform: translateY(-1px);
+  filter:brightness(.98);
+}
+
+#faq-submit:active{
+  transform: translateY(1px);
+}
 
 /* ===== Services Page ===== */
 .services-main {
