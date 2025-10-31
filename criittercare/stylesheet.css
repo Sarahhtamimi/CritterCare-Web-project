@@ -1303,3 +1303,47 @@ td ul li{
 .rating input:checked ~ label{
   color: #f5c518;       
 }
+/*========breadcrumbs===========*/
+.breadcrumbs {
+  background: #f5f2fa;             /* بنفسجي فاتح */
+  padding: 8px 12px;
+  font-size: 0.95rem;
+}
+
+.breadcrumbs ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;                   /* على صف واحد */
+  flex-wrap: wrap;                 /* يكسر لسطرين لو ضاق */
+  gap: 8px;
+}
+
+/* العناصر */
+.breadcrumbs li {
+  display: inline-flex;
+  align-items: center;
+  color: #5a4c76;                  /* نص بنفسجي داكن */
+}
+
+/* الروابط */
+.breadcrumbs a {
+  color: #5a4c76;
+  text-decoration: none;
+}
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+/* السهم الفاصل */
+.breadcrumbs li + li::before {
+  content: "›";                    /* أو "/" حسب ذوقك */
+  margin: 0 6px;
+  color: #8b7aa9;
+}
+
+/* الصفحة الحالية */
+.breadcrumbs [aria-current="page"] {
+  color: #1ea672;                  /* أخضر الهوية */
+  font-weight: 600;
+}
