@@ -76,9 +76,10 @@ form input[type="submit"]:hover {
 header{
 	background-color: #7C6BA1;
 	display: flex;
-	justify-content: flex-start;
+	justify-content: space-between;
 	align-items: center;
-	padding: 10px 50px;
+	padding: 10px 15px;
+  margin-right: 25px;
 	border-bottom: 1px solid #ddd;
 	position: fixed;
   width: 100%;
@@ -86,6 +87,14 @@ header{
 	left: 0;
 	right: 0;
   z-index: 10;
+}
+body{
+  margin: 0;
+  padding-top: 130px;
+}
+.navi{
+  margin-left: auto;
+  display: flex;
 }
 .logo{
 	display: flex;
@@ -101,11 +110,10 @@ header{
 nav ul{
 	list-style: none;
 	display: flex;
-	align-items: stretch;
+	align-items: center;
 	gap: 0;
 	margin: 0;
 	padding: 0;
-	margin-left: 550px;
 }
 nav li{
 	display: flex;
@@ -116,6 +124,7 @@ nav li + li{
 	border-left: 1px solid #ddd;
 }
 nav a{
+  white-space: nowrap;
 	text-decoration: none;
 	color:#F5F3FB;
 	font-weight: bold;
@@ -888,16 +897,6 @@ body{
   text-decoration: none;
 }
 
-
-
-
-
-
-
-
-
-
-
    /* ===== about us css ===== */
   .about-title{
     text-align: center;
@@ -1040,9 +1039,9 @@ div.staff-member img{
   .application-form input,
  .application-form select,
 .application-form textarea {
-  width: 75%;         /* يملأ عرض العمود */
-  padding: 12px 5px;  /* يكبر الداخل */
-  border-radius: 10px; /* زوايا أنعم (اختياري) */
+  width: 75%;         
+  padding: 12px 5px;  
+  border-radius: 10px;
   font-size: 16px;
   margin-top: 3px;
   
@@ -1142,14 +1141,7 @@ td ul li{
   margin-bottom: 30px; 
   text-align: left;
 }
-.dash-label{
-  font-size: 2.4rem;
-  font-weight: 800;
-  color: #000;
-  margin-top: 40px;
-  margin-bottom: 30px;
-  text-align: left;
-}
+
 .caption-title{
   margin: 0;           
   padding: 8px 0 10px; 
@@ -1246,7 +1238,9 @@ td ul li{
   color: #2e7d32; 
   font-weight: 600;
 }
-
+table.request{
+  border: none; 
+}
 /* ====== Request a service ====== */
 
 /*Spaces عشان يرتب الصفحة بشكل عام*/
