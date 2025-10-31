@@ -3,6 +3,74 @@
   font-family: 'Times New Roman', serif;
 }
 
+/* ===== Global Form Style ===== */
+form {
+   
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 35px;
+    max-width: 900px;
+    margin: 40px auto;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+/* Labels */
+form label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+/* Inputs, Textarea, Select */
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form input[type="password"],
+form input[type="file"],
+form textarea,
+form select {
+    width: 70%;
+    padding: 10px 12px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background: #fff;
+    margin-bottom: 18px;
+    font-size: 15px;
+    transition: .2s;
+}
+
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+    border-color: black;
+    outline:  2px solid #000;
+    box-shadow: 0 0 5px rgba(124,107,161,0.4);
+}
+/* Buttons */
+
+form input[type="submit"] {
+    width: 200px;
+    padding: 12px;
+    background: #7C6BA1;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    text-align: center;
+    transition: .3s;
+    display: block;
+    margin: 20px auto 0;
+}
+
+form button:hover,
+form input[type="submit"]:hover {
+    background: #6a5a8f;
+    transform: translateY(-2px);
+}
 
 /*==========HEADER==========*/
 header{
@@ -1303,6 +1371,50 @@ td ul li{
 .rating input:checked ~ label{
   color: #f5c518;       
 }
+/*========breadcrumbs===========*/
+.breadcrumbs {
+  background: #f5f2fa;             /* بنفسجي فاتح */
+  padding: 8px 12px;
+  font-size: 0.95rem;
+}
+
+.breadcrumbs ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;                   /* على صف واحد */
+  flex-wrap: wrap;                 /* يكسر لسطرين لو ضاق */
+  gap: 8px;
+}
+
+/* العناصر */
+.breadcrumbs li {
+  display: inline-flex;
+  align-items: center;
+  color: #5a4c76;                  /* نص بنفسجي داكن */
+}
+
+/* الروابط */
+.breadcrumbs a {
+  color: #5a4c76;
+  text-decoration: none;
+}
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+/* السهم الفاصل */
+.breadcrumbs li + li::before {
+  content: "›";                    /* أو "/" حسب ذوقك */
+  margin: 0 6px;
+  color: #8b7aa9;
+}
+
+/* الصفحة الحالية */
+.breadcrumbs [aria-current="page"] {
+  color: #1ea672;                  /* أخضر الهوية */
+  font-weight: 600;
+}
 /*==========SERVICE PROVIDER DASHBOARD==========*/
 .ServiceProvideDashBoard {
     text-align: center;
@@ -1379,7 +1491,8 @@ td ul li{
 .cardProvider p {
     margin: 0 15px 18px;
     font-size: 0.95rem;
-    color: #555;
+    color: #555555;
+    padding: 20px 12px;
 }
 
 .form-sectionProvider {
@@ -1448,7 +1561,7 @@ td ul li{
 .add-form input[type="text"],
 .add-form input[type="file"]
  {
-    width:80%;
+    width:60%;
     padding: 8px;
     border: 1px solid black;
    
