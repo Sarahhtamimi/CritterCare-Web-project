@@ -877,28 +877,37 @@ body{
     text-decoration: none;
     color: rgb(34, 7, 42);
 }
+.staff-name a{
+  color: #754f86;
+  display: inline-block;
+  transition: transform 0.1s ease, color 0.1s ease;
+  font-size: 23px;
+  margin-top: 2px;
+
+}
+.staff-name a:visited{
+  color: #5b3969;
+}
 .staff-name a:hover{
-    text-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    font-size: 20px;
+    text-shadow: 0 2px 20px rgba(67, 49, 65, 0.5);
+    transform: scale(1.1);
+    color:#482a53;
+    cursor: pointer;
 }
-.staff-photo a:hover{
-    transform: translateY( -5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-.member a:visited{
-    color: rgb(82, 17, 101);
-   
-}
+
+
 .staff-photo{
   width: 160px;
   height: 160px;
-  border:0.5px solid #ddd;
+  border:2px solid #ffffff;
   border-radius: 50%;
+  transition: transform 0.1s ease, color 0.1s ease;
 }
 .staff-photo:hover{
   border: 2px solid #7C6BA1;
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background-color: #faf9ff;
 }
 .form-columns{
 	display: flex;
@@ -920,6 +929,9 @@ div.staff-member img{
 	 padding: 28px 28px 22px;
 	 max-width: 850px;
 	 margin: 10px auto;
+   font-family: 'Courier New', Courier, monospace;
+   font-size: larger;
+   
  }
  .application-form fieldset{
 	 background: #ece4f7;
@@ -956,20 +968,17 @@ div.staff-member img{
   align-items: flex-end;
 	right: 0%;
 }
-.btnApp{
-	 display: block;
-	 min-width: 120px;
-	 border: 0;
-  padding: 10px 25px;
-  margin: 20px auto;
-	 border-radius: 8px;
-	 background: #7C6BA1;
-	 color: #fff;
-	 font-weight: 600;
-	 cursor: pointer;
-	 text-align: center;
-   
- }
+
+  .application-form input,
+ .application-form select,
+.application-form textarea {
+  width: 75%;         /* يملأ عرض العمود */
+  padding: 12px 5px;  /* يكبر الداخل */
+  border-radius: 10px; /* زوايا أنعم (اختياري) */
+  font-size: 16px;
+  margin-top: 3px;
+  
+  }
 table{
   display: block;
 	font-family: "Poppins", Arial, sans-serif;
@@ -1218,6 +1227,9 @@ td ul li{
 	 padding: 5px 8px;
 	 border: 1px solid #c7c7c7;
 	 font: inherit;
+   padding: 12px 5px; 
+  border-radius: 10px;
+  width : 50%
  }
  #request textarea{
 	 height: 120px;
