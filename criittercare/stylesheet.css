@@ -1029,6 +1029,13 @@ table a:hover{
   line-height: 1.3;
   list-style-position: inside;
   width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.profile-list-items{
+ border: 0.5 solid white;
+ padding-top: 20px;
 }
 td ul{
   padding: 0px 0px 0px 4px;
