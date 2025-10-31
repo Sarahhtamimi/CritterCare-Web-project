@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head> <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Critter Care</title> 
+<link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+<header>
+<div class="logo">
+<img src="images/logo.white.png" alt="Critter care logo" width="90" height="90">
+<h1>Critter Care</h1>
+</div>
+<nav class=navi>
+<ul>
+<li><a href="index.html">Home page</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="aboutUs.html">About us</a></li>
+<li><a href="customer-dashboard.html">Customer<br>dashboard</a></li>
+<li><a href="ServiceProviderDashboardPage.html">Service provider<br>dashboard</a></li>
+</ul>
+</nav>
+</header>
+
+<br>
+<!-- ===== breadcrumbs ===== -->
+ <div class="breadcrumb">
+  <a href="index.html">Home</a> > 
+  <a href="ServiceProviderDashboardPage.html">Provider Dashboard</a> > 
+  <span>Manage Staff Members</span>
+ </div>
+
+<main>
+  <br>
+  <br>
+<section class="manage-staff">
+<form class="delete-form">
+<h2>Manage Staff Members</h2>
+<br>
+<hr>
+<br>
+
+
+  <div class="checkbox-column" >
+    <label><input type="checkbox"> <img src="images/staff1.PNG" alt="Staff member photo 1" width="50">Mohammed</label>
+ 
+    <label><input type="checkbox"> <img src="images/staff2.PNG" alt="Staff member photo 2" width="50">Saud</label>
+    
+    <label><input type="checkbox"><img src="images/staff3.PNG" alt="Staff member photo 3" width="50">Nourah</label>
+    
+  </div>
+ 
+  <button type="submit">Delete Staff Member</button>
+</form>
+<br>
+<hr>
+<br>
+<form class="add-staff-form">
+ 
+<h2>Add New Staff Member</h2>
+<br>
+<hr>
+<br>
+
+
+  <div>
+    <label>First Name</label>
+    <input type="text" placeholder="name..">
+  </div>
+
+  <div>
+    <label>Date of birth</label>
+    <div class="dob-row">
+      <input type="text" placeholder="Day">
+      <input type="text" placeholder="Month">
+      <input type="text" placeholder="Year">
+    </div>
+  </div>
+
+  <div>
+    <label>Last Name</label>
+    <input type="text" placeholder="last name...">
+  </div>
+<div><!--for the areas -->
+    <label>Areas of expertise</label>
+    <input type="text" placeholder="expertise 1">
+    <input type="text" placeholder="expertise 2">
+    <input type="text" placeholder="expertise 3">
+  </div>
+  <div>
+    <label>Skills</label>
+
+    <div class="skill-block">
+      <input type="text" placeholder="Skill 1" class="skill-main">
+      <div class="subskills">
+        <input type="text" placeholder="subskill 1">
+        <input type="text" placeholder="subskill 2">
+      </div>
+    </div>
+
+    <div class="skill-block">
+      <input type="text" placeholder="Skill 2" class="skill-main">
+      <div class="subskills">
+        <input type="text" placeholder="subskill 1">
+        <input type="text" placeholder="subskill 2">
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <label>Email</label>
+    <input type="email" placeholder="name@gmail.com...">
+  </div>
+
+  
+
+  <div>
+    <label>Staff photo</label>
+    <label for="staff-photo" class="file-box">Insert photo</label>
+    <input type="file" id="staff-photo" name="staff-photo">
+  </div>
+
+  <div>
+    <label>Education</label>
+    <input type="text" placeholder="School...">
+  </div>
+
+  <button type="submit">Add Staff Member</button>
+</form>
+
+
+
+</section>
+
+</main>
+
+<footer>
+<div class="footer-left">
+<p>&reg; 2025 Critter care. All rights reserved.</p>
+</div>
+<div class="footer-right">
+ <h4>Contact Info</h4>
+<ul class="footer-list">
+<li><img src="images/icons/tele.png" alt="Telephone icon"><a href="tel: +966500000000">+966500000000</a></li>
+<li><img src="images/icons/email.png" alt="Email icon"><a href="mailto:critterCare@gmail.com">critterCare@gmail.com</a></li>
+<li><img src="images/icons/x.png" alt="X icon"><a href="https://x.com/CritterCare" target="_blank">Critter Care</a></li>
+</ul>
+</div>
+</footer>
+</body>
+</html>
