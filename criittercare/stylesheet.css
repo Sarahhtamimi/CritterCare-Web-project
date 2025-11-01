@@ -1415,17 +1415,16 @@ table.request{
 /*========breadcrumbs===========*/
 .breadcrumbs {
   background: #f5f2fa;             /* بنفسجي فاتح */
-  padding: 8px 12px;
-  font-size: 0.95rem;
+  padding: 5px 10px;
+  font-size: 1rem;
 }
 
 .breadcrumbs ol {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 5px 0;
   display: flex;                   /* على صف واحد */
   flex-wrap: wrap;                 /* يكسر لسطرين لو ضاق */
-  gap: 8px;
 }
 
 /* العناصر */
@@ -1442,20 +1441,18 @@ table.request{
 }
 .breadcrumbs a:hover {
   text-decoration: underline;
+  color: #8c7e96;
 }
 
-/* السهم الفاصل */
+
 .breadcrumbs li + li::before {
-  content: "›";                    /* أو "/" حسب ذوقك */
+  content: "›";                
   margin: 0 6px;
   color: #8b7aa9;
 }
 
-/* الصفحة الحالية */
-.breadcrumbs [aria-current="page"] {
-  color: #1ea672;                  /* أخضر الهوية */
-  font-weight: 600;
-}
+
+
 /*==========SERVICE PROVIDER DASHBOARD==========*/
 .ServiceProvideDashBoard {
     text-align: center;
