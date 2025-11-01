@@ -1451,7 +1451,7 @@ table.request{
   margin: 0 6px;
   color: #8b7aa9;
 }
-.breadcrumbs [aria-current="page"] {
+.breadcrumbs .page {
   color: #5c2c4d; /* أخضر الهوية */
   font-weight: 600;
 }
