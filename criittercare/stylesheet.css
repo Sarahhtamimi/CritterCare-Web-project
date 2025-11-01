@@ -167,6 +167,52 @@ nav a:hover{
 }
 
 
+
+
+/*========breadcrumbs===========*/
+.breadcrumbs {
+  background: #f5f2fa; 
+  padding: 5px 10px;
+  font-size: 1rem;
+}
+
+.breadcrumbs ol {
+  list-style: none;
+  margin: 0;
+  padding: 5px 0;
+  display: flex; 
+  flex-wrap: wrap; 
+}
+
+
+.breadcrumbs li {
+  display: inline-flex;
+  align-items: center;
+  color: #5a4c76;
+}
+
+
+.breadcrumbs a {
+  color: #5a4c76;
+  text-decoration: none;
+  font-weight: normal;
+}
+.breadcrumbs a:hover {
+  text-decoration: underline;
+  color: #8c7e96;
+}
+
+
+.breadcrumbs li + li::before {
+  content: "›";                
+  margin: 0 6px;
+  color: #8b7aa9;
+}
+.breadcrumbs .page {
+  color: #5c2c4d; 
+  font-weight: 600;
+}
+
 /*==========FOOTER==========*/
 footer{
 	display: flex;
@@ -1441,49 +1487,6 @@ table.request{
 }
 .rating input:checked ~ label{
   color: #f5c518;       
-}
-/*========breadcrumbs===========*/
-.breadcrumbs {
-  background: #f5f2fa;             /* بنفسجي فاتح */
-  padding: 5px 10px;
-  font-size: 1rem;
-}
-
-.breadcrumbs ol {
-  list-style: none;
-  margin: 0;
-  padding: 5px 0;
-  display: flex;                   /* على صف واحد */
-  flex-wrap: wrap;                 /* يكسر لسطرين لو ضاق */
-}
-
-/* العناصر */
-.breadcrumbs li {
-  display: inline-flex;
-  align-items: center;
-  color: #5a4c76;                  /* نص بنفسجي داكن */
-}
-
-/* الروابط */
-.breadcrumbs a {
-  color: #5a4c76;
-  text-decoration: none;
-  font-weight: normal;
-}
-.breadcrumbs a:hover {
-  text-decoration: underline;
-  color: #8c7e96;
-}
-
-
-.breadcrumbs li + li::before {
-  content: "›";                
-  margin: 0 6px;
-  color: #8b7aa9;
-}
-.breadcrumbs .page {
-  color: #5c2c4d; /* أخضر الهوية */
-  font-weight: 600;
 }
 
 /*==========SERVICE PROVIDER DASHBOARD==========*/
