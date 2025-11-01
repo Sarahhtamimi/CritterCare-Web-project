@@ -1023,7 +1023,7 @@ body{
 div.staff-member img{
 	width: 160px;
 	height: 160px;
-	border: 50% solid;
+	border: 0.25px solid white;
 	justify-content: space-around;
 	
 }
@@ -1139,7 +1139,7 @@ table a:hover{
   justify-content: space-around;
 }
 .profile-list-items{
- border: 0.5 solid white;
+ 
  padding-top: 20px;
 }
 td ul{
@@ -1209,8 +1209,7 @@ td ul li{
 	display: block;
 	}
 /*For cards body(TEXT)*/
-.cards-body a{
-  position: center;
+.cards{
   margin: 14px 0 6px;
 	padding-bottom: 20px;
   color: #5b4b8a;
@@ -1229,7 +1228,7 @@ td ul li{
 /*Border for the table*/
 .request {
   width: 90%;
-  margin-bottom: 1000x;
+  margin-bottom: 100px;
   caption-side: top;
   font-weight: 700;
   font-size: 1.15rem;  
