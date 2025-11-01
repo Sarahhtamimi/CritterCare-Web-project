@@ -1308,8 +1308,8 @@ td ul li{
     width: 100%;
   margin-bottom: 10px;
   caption-side: top;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 12%;
+  margin-right: 5%;
   text-align: center;
   
 }
@@ -1330,8 +1330,8 @@ table.request{
   border: none; 
 }
 .request td,.request th{
-width: 200px;
-height: 75px;
+width: 150px;
+height: 50px;
 }
 /* ====== Request a service ====== */
 
