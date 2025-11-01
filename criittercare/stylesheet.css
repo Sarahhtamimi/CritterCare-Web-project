@@ -1747,10 +1747,12 @@ display: none;
 /* Checkbox columns for staff management */
 .checkbox-column {
     display: flex;
+    height: 300px;
     flex-direction: column;
     gap: 15px;
     align-items: flex-start;
     margin: 20px 0;
+    overflow: scroll;
 }
 
 .checkbox-column label {
