@@ -1227,14 +1227,16 @@ td ul li{
 /*Previous requests (Tabel)*/
 /*Border for the table*/
 .request {
-  width: 90%;
+  
+  width: 100%;
   margin-bottom: 100px;
   caption-side: top;
   font-weight: 700;
   font-size: 1.15rem;  
   color: #000;
-  margin: 16px 0 10px;
-  text-align: left;
+  margin-left: 25%;
+  margin-right: 50%;
+  text-align: center;
   opacity: 1;
 }
 /*Tiltle of the table*/
@@ -1468,10 +1470,10 @@ table.request{
 .ServiceProvideDashBoard::after {
     content: "";
     display: block;
-    width: 100px;
+    width: 10px;
     height: 4px;
     background-color: #7C6BA1;
-    margin: 15px auto 0;
+    margin: 0 auto 0;
     border-radius: 2px;
 }
 
@@ -1498,6 +1500,7 @@ table.request{
     cursor: pointer;
     transition: all 0.3s ease;
     width: 250px;
+    gap: 250px;
     position: relative;
     text-decoration: none;
     color: inherit;
@@ -1522,7 +1525,7 @@ table.request{
 }
 
 .cardProvider h3 {
-    margin: 14px 0 6px;
+    margin: 1px 0 1px;
     font-size: 1.1rem;
     color: #5b4b8a;
     font-weight: 600;
@@ -1530,7 +1533,7 @@ table.request{
 }
 
 .cardProvider p {
-    margin: 0 15px 18px;
+    margin: 0 15px 1px;
     font-size: 0.95rem;
     color: #555555;
     padding: 20px 12px;
