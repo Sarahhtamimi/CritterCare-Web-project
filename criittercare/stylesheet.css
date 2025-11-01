@@ -3,7 +3,13 @@
   font-family: 'Times New Roman', serif;
 }
 
-/* ===== Global Form Style ===== */
+.divider{
+  margin: 50px auto;
+  width: 800px;
+  border: none;
+  border-top: 1px solid #eee;
+}
+
 form {
    
     border: 1px solid #ccc;
@@ -298,12 +304,7 @@ body{
     margin: 20px 0;
 }
 
-.vm-end {
-    margin: 50px auto;
-    width: 80%;
-    border: none;
-    border-top: 1px solid #eee;
-}
+
 /* ===== Services Section ===== */
 .services-section {
     margin: 60px 0;
@@ -797,7 +798,7 @@ body{
 
 .star-icon {
   width: 40px;
-  height: 20px;
+  height: 25px;
 }
 
 .services-header p {
@@ -1482,7 +1483,7 @@ table.request{
     justify-content: center;
     gap: 25px;
     margin: 40px 0 60px;
-    max-width: 1100px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -1490,6 +1491,7 @@ table.request{
 /* Design the cardProvider */
 .cardProvider {
     background: #fff;
+    padding: 0px 0px 10px 0px;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     overflow: hidden;
@@ -1539,7 +1541,7 @@ table.request{
     text-align: center;
     margin: 0 0 40px;
     color: #333;
-    font-size: 1.8rem;
+    font-size: 20px;
     font-weight: 700;
     position: relative;
     
