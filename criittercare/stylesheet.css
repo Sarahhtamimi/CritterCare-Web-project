@@ -1302,42 +1302,16 @@ td ul li{
 /*Previous requests (Tabel)*/
 /*Border for the table*/
 .request {
-  
-  width: 100%;
+    width: 100%;
   margin-bottom: 100px;
   caption-side: top;
-  font-weight: 700;
-  font-size: 1.15rem;  
-  color: #000;
   margin-left: 25%;
   margin-right: 50%;
   text-align: center;
-  opacity: 1;
+  
 }
-/*Tiltle of the table*/
-.request caption {
-  caption-side: top;
-  font-weight: 700;
-  text-align: left;
-  color: #000;
-  margin-bottom: 10px;
-}
-/*Labels rows*/
-.request thead {
-  background-color: #ece4f7; 
-  color: #000;
-}
-/*Cells*/
-.request th, .request td {
-  text-align: center;
-  vertical-align: middle;
-  padding: 10px 14px;
-  border: 1px solid #ddd; 
-}
-/*request number*/
-.request td.number {
-  background-color: #ece4f7; 
-  font-weight: 700;
+table.request{
+   width: 95%;
 }
 /* status */
 .status.declined {
@@ -1364,14 +1338,18 @@ table.request{
 	margin: 0 0 8px;
 	font-size: 40px;
 }
-#request .lead{
-	text-align: left;
+.lead{
+	text-align: center;
     margin: 0 0 40px;
     color: #333;
-    font-size: 1.8rem;
+    font-size: 1.1rem;
     font-weight: 700; 
     position: relative;
     font-family: inherit; 
+}
+h3.lead{
+  text-align: left;
+  font-size: 1.8rem;
 }
 
  
@@ -1419,24 +1397,6 @@ table.request{
 	 height: 120px;
 	 resize: vertical;
  }
- /*For buttons*/
- .btn{
-	 display: inline-block;
-	 min-width: 120px;
-	 padding: 10px 16px;
-	 border: 0;
-	 border-radius: 8px;
-	 background: #7C6BA1;
-	 color: #fff;
-	 font-weight: 600;
-	 cursor: pointer;
- }
- .btn:hover{
-	 filter:brightness(.98);
- }
- .btn:active{
-	 transform: translateY(1px);
- }
 /* ===== Evaulate page =====*/
 
 #evaluation{
@@ -1447,23 +1407,6 @@ table.request{
 #evaluation h1{
   margin: 0 0 8px;
   font-size: 40px;
-}
-#evaluation .lead{
-  white-space: nowrap;     
-  overflow: hidden;         
-  display: block;
-  max-width: 100%;          
-  color: #333;
-  margin-bottom: 24px;
-}
-.eva-title h2{
-  text-align: center;
-    margin: 0 0 40px;
-    color: #333;
-    font-size: 1.8rem;
-    font-weight: 700; 
-    position: relative;
-    font-family: inherit; 
 }
 /*Eval stars*/
 .rating{
