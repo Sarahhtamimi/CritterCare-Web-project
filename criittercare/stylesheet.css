@@ -1438,6 +1438,7 @@ table.request{
 .breadcrumbs a {
   color: #5a4c76;
   text-decoration: none;
+  font-weight: normal;
 }
 .breadcrumbs a:hover {
   text-decoration: underline;
@@ -1450,8 +1451,10 @@ table.request{
   margin: 0 6px;
   color: #8b7aa9;
 }
-
-
+.breadcrumbs [aria-current="page"] {
+  color: #5c2c4d; /* أخضر الهوية */
+  font-weight: 600;
+}
 
 /*==========SERVICE PROVIDER DASHBOARD==========*/
 .ServiceProvideDashBoard {
