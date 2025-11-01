@@ -78,6 +78,31 @@ form input[type="submit"]:hover {
     transform: translateY(-2px);
 }
 
+
+
+.button {
+  background: #7C6BA1;
+  color: white;
+  border: none;
+  padding: 12px 40px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+  margin: 30px auto 0;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  filter:brightness(.98);
+}
+
+.button:active{
+  transform: translateY(2px);
+}
+
 /*==========HEADER==========*/
 header{
 	background-color: #7C6BA1;
@@ -679,6 +704,10 @@ body{
 .faq-cta-link:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.faq-cta-link:active{
+  transform: translateY(2px);
 }
 
 
