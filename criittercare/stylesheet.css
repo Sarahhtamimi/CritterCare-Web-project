@@ -1897,3 +1897,97 @@ display: none;
   direction: ltr;
 }
 /*=============Responsive code=====================*/
+#menu-toggle {
+  display: none;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding-right: 35px; /* تبعده عن الطرف */
+}
+
+.hamburger span {
+  width: 30px;
+  height: 5px;
+  background: #fff;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: flex; 
+  }
+
+  .nav-links {
+    display: none; 
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: #7C6BA1;
+    padding: 15px 0;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links li {
+    padding: 12px 0;
+  }
+
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+
+  #menu-toggle:checked + .hamburger span:nth-child(1) {
+  transform: translateY(12.5px) rotate(45deg);
+}
+
+#menu-toggle:checked + .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-toggle:checked + .hamburger span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav-links li{
+  font-size: 25px;
+  border-bottom: 2px solid white;
+  border-left: 0px solid ;
+}
+.application-form {
+    padding: 12px;
+    margin: 20px;
+  }
+
+  .form-sections {
+    flex-direction: column;}
+
+  .left-side,
+  .middle-side,
+  .right-side {
+    flex: 1 1 100%;
+  }
+
+  .application-form input,
+  .application-form select,
+  .application-form textarea {
+    width: 75%;  
+    font-size: 2opx;            /* كل الحقول عرض كامل */
+  }
+
+  fieldset {
+    padding: 12px;
+  }
+ 
+  .application-form label{
+    font-size: 25px;
+  }
+  .table-container{
+    min-width: 500;
+  }
+}
