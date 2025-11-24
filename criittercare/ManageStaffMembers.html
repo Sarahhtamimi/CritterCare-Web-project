@@ -138,6 +138,125 @@
 
 
 </main>
+<script>
+
+
+//  existing staff 
+let staffList = JSON.parse(localStorage.getItem("staffList")) || [
+    { name: "Sarah Altamimi", photo: "images/staff/staff2.png" },
+    { name: "Raneem Aloraini", photo: "images/staff/staff3.png" },
+    { name: "Aliyah Alharbi", photo: "images/staff/staff4.png" },
+    { name: "Leenah Altamimi", photo: "images/staff/staff5.png" },
+    { name: "Noura Almutairi", photo: "images/staff/staff6.png" },
+    { name: "Dana Alshammari", photo: "images/staff/staff7.png" }
+];
+
+ //Show Staff Members 
+function showStaff(){
+    let area = document.querySelector(".checkbox-column");
+    area.innerHTML = "";
+
+    staffList.forEach((st, i) => {
+        let row = `
+            <label>
+                <input type="checkbox" data-id="${i}">
+                <img src="${st.photo}" width="50" onerror="this.src='images/staff/default.png'">
+                ${st.name}
+            </label>
+        `;
+        area.innerHTML += row;
+    });
+}
+showStaff();
+
+// Delete Staff Member 
+document.querySelector(".delete-form").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let checks = document.querySelectorAll(".checkbox-column input[type='checkbox']");
+    let picked = [];
+
+    checks.forEach(c => {
+        if(c.checked){
+            picked.push(Number(c.dataset.id));
+        }
+    });
+
+    if(picked.length === 0){
+        alert("Select at least one staff member.");
+        return;
+    }
+
+    if(!confirm("Are you sure you want to delete the selected staff?")){
+        return;
+    }
+
+    staffList = staffList.filter((_, index) => !picked.includes(index));
+    localStorage.setItem("staffList", JSON.stringify(staffList));
+    staffList = JSON.parse(localStorage.getItem("staffList"));
+    showStaff();
+
+    alert("Staff deleted successfully.");
+});
+
+//Add New Staff Member 
+document.querySelector(".add-staff-form").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    // Validate all fields text/email/textareas
+    let fields = this.querySelectorAll("input[type='text'], input[type='email'], textarea");
+    for(let f of fields){
+        if(f.value.trim() === ""){
+            alert("Please fill all fields.");
+            return;
+        }
+    }
+
+    let first = fields[0].value.trim();
+    let last  = fields[3].value.trim();
+    let full  = first + " " + last;
+
+    let file = document.getElementById("staff-photo");
+
+    
+    if(file.files.length > 0){
+        let reader = new FileReader();
+
+        reader.onload = function(){
+            let photo = reader.result; 
+            addNewStaff(full, photo);
+        };
+
+        reader.readAsDataURL(file.files[0]);
+        return;
+    }
+
+    // If no image uploaded  we add default
+    addNewStaff(full, "images/staff/default.png");
+
+});
+
+
+function addNewStaff(name, photo){
+
+    staffList.push({
+        name: name,
+        photo: photo
+    });
+
+    localStorage.setItem("staffList", JSON.stringify(staffList));
+
+    
+    staffList = JSON.parse(localStorage.getItem("staffList"));
+
+    showStaff();
+    alert(`Staff member "${name}" added successfully!`);
+
+    document.querySelector(".add-staff-form").reset();
+}
+
+</script>
+
 
 <footer>
 <div class="footer-left">
