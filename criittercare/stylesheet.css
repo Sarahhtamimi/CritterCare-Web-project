@@ -754,6 +754,73 @@ body{
 }
 
 
+/* Back to Top Button Styles */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #8673ad; 
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+.back-to-top.show {
+    opacity: 0.75;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: #8673ad; 
+    opacity: 0.85;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.back-to-top:active {
+  transform: translateY(0px);
+  transition: all 0.3s ease;
+      background-color: #8879a7; 
+
+  
+}
+
+.back-to-top::after {
+    content: "↑";
+}
+
+/* Force footer-left to be a block element */
+.footer-left {
+    display: block;
+
+}
+/* Clock Styles */
+.footer-clock {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    display: inline-block;
+    font-family: monospace;
+    letter-spacing: 1px;
+}
+
+
 /* ==== FAQ Page ==== */
 .add-faq-form {
   max-width: 750px;
