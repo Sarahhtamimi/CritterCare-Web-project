@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang>
-<head> <meta charset="utf-8">
+<head> <meta charset="utf-8" >
 <meta name="viewport" content="width=device-width, initial-scale=1" >
 <title>About Us</title> 
 <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
+  <script src="script.js"></script>
 <header>
 <div class="logo">
 <img src="images/logo.white.png" alt="Critter care logo" width="90" height="90">
 <h1>Critter Care</h1>
 </div>
 <nav class=navi>
-<ul>
+  <input type ="checkbox" id="menu-toggle" />
+  <label for="menu-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+  </label>
+<ul class="nav-links">
 <li><a href="index.html">Home page</a></li>
 <li><a href="services.html">Services</a></li>
 <li><a href="AboutUs.html">About us</a></li>
@@ -81,14 +88,14 @@
         <!-- Left -->
         <div class="left-side">
           <label for="name">Full Name:</label>
-          <br>
+        
         
           <input type="text" id="name" name="name" placeholder="Sarah Alghamdi"  >
           <br>
           <br>
           <br>
           <label for="email">Email Address:</label>
-          <br>
+        
           <input type="email" id="email" name="email" placeholder="name@gmail.com">
             <br>
             <br>
@@ -99,17 +106,20 @@
     <input type="file" id="staff-photo" name="staff-photo">
   </div>
 <br>
-            <br>
+           
             <br>
           <label for="DoB">Date of Birth:</label>
-          <br>
+        
           <input type="date" id="DoB" name="DoB" required>
+          <br>
+          <br>
         </div>
+
 
         <!-- Middle -->
         <div class="middle-side">
           <label for="position">Position Applied For:</label>
-          <br>
+       
           <select id="position" name="position" >
             <option value="" disabled selected>Select position</option>
             <option value="animal-caretaker">Animal Caretaker</option>
@@ -135,16 +145,15 @@
             <br>
             <br>
           <label for="skills">Skills & Qualifications:</label>
-          <br>
+        
        
           <textarea id="skills" name="skills" rows="5" cols="50" placeholder="List your skills and qualifications..."></textarea>
         </div>
-
+<br>
         <!-- Right -->
         <div class="right-side">
           <label for="education">Education:</label>
-          <br>
-        
+      
           <textarea id="education" name="education" rows="5" cols="50" placeholder="List your educational background..."></textarea>
 <br>
             <br>

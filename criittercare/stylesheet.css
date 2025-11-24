@@ -1,4 +1,4 @@
-/*موحد*/
+
 *{
   font-family: 'Times New Roman', serif;
 }
@@ -220,7 +220,7 @@ footer{
 	padding: 20px 0px;
 	background-color: #7C6BA1;
 	color: white;
-	border-top: 1px solid rgba(255,255,255,.35);
+	border-top: 0px solid rgba(255,255,255,.35);
 	border-bottom: 1px solid rgba(255, 255, 255, .2);
 	gap: 48px;
 	min-height: 110px;
@@ -233,6 +233,7 @@ footer{
 
 .footer-left, .footer-right {
 	display: flex;
+  flex: 1 1 300px;
 	align-items: center;
 	justify-content: center;
 	gap: 40px; 
@@ -754,6 +755,73 @@ body{
 }
 
 
+/* Back to Top Button Styles */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #8673ad; 
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+.back-to-top.show {
+    opacity: 0.75;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: #8673ad; 
+    opacity: 0.85;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.back-to-top:active {
+  transform: translateY(0px);
+  transition: all 0.3s ease;
+      background-color: #8879a7; 
+
+  
+}
+
+.back-to-top::after {
+    content: "↑";
+}
+
+/* Force footer-left to be a block element */
+.footer-left {
+    display: block;
+
+}
+/* Clock Styles */
+.footer-clock {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    display: inline-block;
+    font-family: monospace;
+    letter-spacing: 1px;
+}
+
+
 /* ==== FAQ Page ==== */
 .add-faq-form {
   max-width: 750px;
@@ -1239,7 +1307,8 @@ td ul li{
 
 .actions {
   margin-bottom: 75px;
-  display: grid;
+  display: flex;
+  
   grid-template-columns: repeat(2, minmax(360px, 1fr)); 
   gap: 18px;
   margin: 30px 0 60px; 
@@ -1252,7 +1321,8 @@ td ul li{
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 500px;
+    width: 200%;
+    height: 25%;
     position: relative;
 }
 
@@ -1352,7 +1422,13 @@ h3.lead{
   text-align: left;
   font-size: 1.8rem;
 }
-
+.table-container {
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+  overflow-x: auto;         
+  padding: 10px 0;
+}
  
  /*Card for request*/
  .form-card{
@@ -1895,4 +1971,128 @@ display: none;
 
 .add-staff-form * {
   direction: ltr;
+}
+/*=============Responsive code=====================*/
+#menu-toggle {
+  display: none;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding-right: 35px; /* تبعده عن الطرف */
+}
+
+.hamburger span {
+  width: 30px;
+  height: 5px;
+  background: #fff;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: flex; 
+  }
+
+  .nav-links {
+    display: none; 
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: #7C6BA1;
+    padding: 15px 0;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links li {
+    padding: 12px 0;
+  }
+
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+
+  #menu-toggle:checked + .hamburger span:nth-child(1) {
+  transform: translateY(12.5px) rotate(45deg);
+}
+
+#menu-toggle:checked + .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-toggle:checked + .hamburger span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav-links li{
+  font-size: 25px;
+  border-bottom: 2px solid white;
+  border-left: 0px solid ;
+}
+.application-form {
+    padding: 12px;
+    margin: 20px;
+  }
+
+  .form-sections {
+    flex-direction: column;}
+
+  .left-side,
+  .middle-side,
+  .right-side {
+    flex: 1 1 100%;
+  }
+
+  .application-form input,
+  .application-form select,
+  .application-form textarea {
+    width: 75%;  
+    font-size: 20px;            /* كل الحقول عرض كامل */
+  }
+
+  fieldset {
+    padding: 12px;
+  }
+ 
+  .application-form label{
+    font-size: 25px;
+  }
+  .table-container{
+    min-width: 500;
+  }
+  
+.actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards {
+    width: 90% ;
+    max-width: 400px;
+  }
+  footer {
+    flex-direction: column;     /* كله يصير عمودي */
+    text-align: center;         /* النصوص تصير بالنص */
+    gap: 20px;
+    border-left: 0px solid;
+     border-left: 2px solid;
+  }
+
+  .footer-left,
+  .footer-right {
+    flex: 1 1 100%;
+  }
+
+  .footer-list li {
+    justify-content: center; 
+  }
+  .footer-right::before{
+    display: none;
+}
 }
