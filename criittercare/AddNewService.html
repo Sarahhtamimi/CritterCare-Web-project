@@ -83,6 +83,85 @@
 </section>
 
 </main>
+<script>
+document.querySelector(".add-form").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let name = document.getElementById("service-name").value.trim();
+    let desc = document.getElementById("service-description").value.trim();
+    let price = document.getElementById("service-price").value.trim();
+
+    // photo path
+    let file = document.getElementById("service-photo");
+let photo = "";
+
+if (file.files.length > 0) {
+    let reader = new FileReader();
+
+    reader.onload = function () {
+        photo = reader.result; 
+
+       //save
+
+        let newService = {
+            name: name,
+            photo: photo,
+            description: desc,
+            price: price
+        };
+
+        let list = localStorage.getItem("services");
+        list = list ? JSON.parse(list) : [];
+        list.push(newService);
+        localStorage.setItem("services", JSON.stringify(list));
+
+        alert("Service added.");
+        document.querySelector(".add-form").reset();
+    };
+
+    reader.readAsDataURL(file.files[0]);
+    return; 
+}
+
+
+    // empty fields
+    if(name === "" || desc === "" || price === "" || photo === ""){
+        alert("Please fill all fields.");
+        return;
+    }
+
+    // name cant start with number
+    if(!isNaN(name[0])){
+        alert("Service name cannot start with a number.");
+        return;
+    }
+
+    // price must be a number
+    if(isNaN(price)){
+        alert("Price must be a number.");
+        return;
+    }
+
+    // save
+    let newService = {
+        name: name,
+        photo: photo,
+        description: desc,
+        price: price
+    };
+
+    let list = localStorage.getItem("services");
+    list = list ? JSON.parse(list) : [];
+    list.push(newService);
+    localStorage.setItem("services", JSON.stringify(list));
+
+    alert("Service added.");
+    this.reset();
+});
+
+</script>
+
+
 <br>
 <br>
 <br>

@@ -5,7 +5,7 @@
 <title>Critter Care</title> 
 <link rel="stylesheet" href="stylesheet.css">
 </head>
-<body><script src="script.js"></script>
+<body>
 <header>
 <div class="logo">
 <img src="images/logo.white.png" alt="Critter care logo" width="90" height="90">
@@ -48,24 +48,12 @@
   <h2 class="ProviderTitle">Current services</h2>
  
   
-  <div class="gridProv">
-    <div class="cardProvider">
-      <img src="images/serviceA.jpg" alt="Pet grooming service image">
-      <p>Grooming</p>
-    </div>
-    <div class="cardProvider">
-      <img src="images/serviceB.jpg" alt="Pet training session image">
-      <p>Training</p>
-    </div>
-    <div class="cardProvider">
-      <img src="images/serviceD.jpg" alt="Veterinary checkup image">
-      <p>Veterinary</p>
-    </div>
-    <div class="cardProvider">
-      <img src="images/serviceC.jpg" alt="Pet boarding  image">
-      <p >Boarding</p>
-    </div>
-  </div>
+ 
+    <div class="gridProv" id="services-container">
+  <!-- Will be filled by JavaScript -->
+</div>
+
+
 </section>
 <hr class="divider">
 <section class="form-sectionProvider">
@@ -83,6 +71,35 @@
   </div>
 </section>
 </main>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+    let services = localStorage.getItem("services");
+    services = services ? JSON.parse(services) : [];
+
+    let box = document.getElementById("services-container");
+
+    if(services.length === 0){
+        box.innerHTML = "<p>No services added yet.</p>";
+        return;
+    }
+
+    services.forEach(function(s){
+        let div = document.createElement("div");
+        div.className = "cardProvider";
+
+        div.innerHTML = `
+            <img src="${s.photo}" alt="service img">
+            <p>${s.name}</p>
+            <p>${s.price} SAR</p>
+        `;
+
+        box.appendChild(div);
+    });
+
+});
+</script>
+
 
 
 <footer>
