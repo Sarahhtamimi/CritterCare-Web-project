@@ -2072,11 +2072,17 @@ display: none;
   }
   
 .actions {
-    flex-direction: column;
-    align-items: center;
+   display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 16px;
+    padding: 10px 10px 20px;
   }
 
   .cards {
+    flex: 0 0 75% ; ;
     width: 90% ;
     max-width: 400px;
   }
@@ -2177,14 +2183,12 @@ display: none;
     flex-wrap: nowrap !important;    /* يمنع النزول تحت بعض */
     overflow-x: auto !important;     /* سكروول أفقي */
     overflow-y: hidden;
-    
     gap: 16px;
     padding: 10px 15px 20px;
 
     width: 100%;
-    max-width: 100% !important;      /* ينسف الـ 1100px */
-  /* سحب ناعم */
-      /* يثبت كل كرت */
+    max-width: 100% !important;  
+  
   }
 
   .services-container .service {
@@ -2196,6 +2200,42 @@ display: none;
   .service {
     width: auto !important;
   }
+.services-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
 
+    overflow-x: auto !important;
+    overflow-y: hidden;
+    gap: 20px;
+    padding: 10px 5px 20px;
+    margin: 0;
+  }
 
+  /* كل كرت يكون عرضه ثابت */
+  .services-grid .service-card {
+    flex: 0 0 75% ;       /* حجم كبير ومناسب للجوال */
+    max-width: 300px ;
+   
+  }
+
+  /* تأكد إن أي width سابق ما يخرب */
+  .service-card {
+    width: auto !important;
+  }
+.gridProv {
+  display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 16px;
+    padding: 10px 10px 20px;
+}
+
+.cardProvider{
+    flex: 0 0 75% ; ;
+    width: 90% ;
+    max-width: 400px;
+}
 }
