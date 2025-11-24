@@ -1177,19 +1177,10 @@ div.staff-member img{
 	 background: #ece4f7;
 	 border: 1px solid #cfcfcf;
 	 border-radius: 24px;
-<<<<<<< Updated upstream
-	 padding: 28px 28px 22px;
-	 max-width: 850px;
-	 margin: 10px auto;
-   font-family: 'Courier New', Courier, monospace;
-   font-size: larger;
-   
-=======
 	 padding: 50;
    font-size: 20px;
 
 	 margin: 10px 175px;
->>>>>>> Stashed changes
  }
  .application-form fieldset{
 	 background: #ece4f7;
