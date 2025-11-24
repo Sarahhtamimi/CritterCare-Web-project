@@ -711,7 +711,7 @@ body{
 
 
 /* toggle + sign */
-.faq-toggle:checked ~ .faq-answer {
+ .faq-toggle:checked ~ .faq-answer {
   max-height: 200px;
   padding: 0 25px 20px 25px;
 }
@@ -719,7 +719,7 @@ body{
   transform: rotate(45deg);
 }
 
-.faq-toggle:checked ~ .faq-question {
+ .faq-toggle:checked ~ .faq-question {
   background-color: #f8f6ff;
 }
 .faq-cta {
@@ -894,7 +894,11 @@ body{
 #faq-submit:active{
   transform: translateY(2px);
 }
-
+.vm-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
 /* ===== Services Page ===== */
 .services-main {
   max-width: 1200px;
@@ -1159,7 +1163,7 @@ body{
 .form-columns{
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-between ;
 	margin: 20px;
 }
 div.staff-member img{
@@ -1173,12 +1177,10 @@ div.staff-member img{
 	 background: #ece4f7;
 	 border: 1px solid #cfcfcf;
 	 border-radius: 24px;
-	 padding: 28px 28px 22px;
-	 max-width: 850px;
-	 margin: 10px auto;
-   font-family: 'Courier New', Courier, monospace;
-   font-size: larger;
-   
+	 padding: 50;
+   font-size: 20px;
+
+	 margin: 10px 175px;
  }
  .application-form fieldset{
 	 background: #ece4f7;
@@ -1190,20 +1192,22 @@ div.staff-member img{
 	 font-weight: 700;
 	 text-align: center;
 	 color: #333;
-	 padding: 0 12px;
+	 padding: 30px ;
 	 margin-bottom: 14px;
  
  }
 .form-sections{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
 
 }
 .left-side{
   flex:3;
   align-items: flex-start;
 	left: 0%;
+  padding-left: 0;
+  margin-left: 0;
 }
 .middle-side{
   flex:3;
@@ -1214,6 +1218,8 @@ div.staff-member img{
   flex:3;
   align-items: flex-end;
 	right: 0%;
+  padding-right: 0;
+  margin-right: 0;
 }
 
   .application-form input,
@@ -2068,11 +2074,17 @@ display: none;
   }
   
 .actions {
-    flex-direction: column;
-    align-items: center;
+   display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 16px;
+    padding: 10px 10px 20px;
   }
 
   .cards {
+    flex: 0 0 75% ; ;
     width: 90% ;
     max-width: 400px;
   }
@@ -2095,4 +2107,157 @@ display: none;
   .footer-right::before{
     display: none;
 }
+.vm-section {
+    display: flex;
+    flex-direction: column;   /* تحت بعض */
+    gap: 16px;
+  }
+
+  /* نخفي الخط اللي بالنص في الموبايل */
+  .vm-divider {
+    display: none;
+  }
+
+  .vm-block {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 10px 12px;
+  }
+
+  /* العنوان نفسه */
+  .vm-block h2 {
+    margin: 0;
+  }
+
+  .vm-block h2 label {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    border-radius: 8px;
+    background-color: #f3eefc;   /* بنفسجي فاتح */
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .vm-block p {
+    display: none;
+    margin-top: 8px;
+  }
+
+  
+  .vm-toggle:checked ~ p {
+    display: block;
+    padding: 10px 12px;
+    background-color: #fbf9ff;
+    border-radius: 8px;
+    max-height: 150px;   
+    overflow-y: auto;
+  }
+  .vm-block  {
+  font-size: 1.4rem;
+  color: #7C6BA1;
+  font-weight: bold;
+  margin-left: 8px;
 }
+.vm-block {
+  font-size: 1.4rem;
+  color: #7C6BA1;
+  font-weight: bold;
+  margin-left: 8px;
+}
+.vm-block :hover {
+    background-color: #faf9ff;
+  }
+  .faq-icon{
+    font-size: 1.5rem;
+  color: #7C6BA1;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+  }
+  
+  .vm-toggle:checked ~ .faq-icon {
+  transform: rotate(45deg); }  
+
+.services-container {
+    display: flex !important;        /* غصب يصير flex */
+    flex-wrap: nowrap !important;    /* يمنع النزول تحت بعض */
+    overflow-x: auto !important;     /* سكروول أفقي */
+    overflow-y: hidden;
+    gap: 16px;
+    padding: 10px 15px 20px;
+
+    width: 100%;
+    max-width: 100% !important;  
+  
+  }
+
+  .services-container .service {
+    flex: 0 0 75% !important;   
+    max-width: 300px !important;
+   
+  }
+
+  .service {
+    width: auto !important;
+  }
+.services-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+
+    overflow-x: auto !important;
+    overflow-y: hidden;
+    gap: 20px;
+    padding: 10px 5px 20px;
+    margin: 0;
+  }
+
+  /* كل كرت يكون عرضه ثابت */
+  .services-grid .service-card {
+    flex: 0 0 75% ;       /* حجم كبير ومناسب للجوال */
+    max-width: 300px ;
+   
+  }
+
+  .service-card {
+    width: auto !important;
+  }
+.gridProv {
+  display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 16px;
+    padding: 10px 10px 20px;
+}
+
+.cardProvider{
+    flex: 0 0 75% ; ;
+    width: 90% ;
+    max-width: 400px;
+}
+
+
+
+.faq-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 4px;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+}
+

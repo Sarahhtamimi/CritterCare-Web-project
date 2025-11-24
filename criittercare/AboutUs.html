@@ -88,39 +88,30 @@
         <!-- Left -->
         <div class="left-side">
           <label for="name">Full Name:</label>
-        
-        
-          <input type="text" id="name" name="name" placeholder="Sarah Alghamdi"  >
+          <br>
+          <input type="text" id="name" name="name" placeholder="Sarah Alghamdi">
           <br>
           <br>
           <br>
           <label for="email">Email Address:</label>
-        
           <input type="email" id="email" name="email" placeholder="name@gmail.com">
             <br>
             <br>
             <br>
-           <div>
-    <label>Staff photo</label>
-    <label for="staff-photo" class="file-box">Insert photo</label>
-    <input type="file" id="staff-photo" name="staff-photo">
-  </div>
+          <label for="photo">Photo:</label>
+          <input type="file" id="photo" name="photo" accept="image/*">
 <br>
            
             <br>
           <label for="DoB">Date of Birth:</label>
-        
           <input type="date" id="DoB" name="DoB" required>
-          <br>
-          <br>
         </div>
 
 
         <!-- Middle -->
         <div class="middle-side">
           <label for="position">Position Applied For:</label>
-       
-          <select id="position" name="position" >
+          <select id="position" name="position">
             <option value="" disabled selected>Select position</option>
             <option value="animal-caretaker">Animal Caretaker</option>
             <option value="groomer">Groomer</option>
@@ -133,36 +124,33 @@
             <br>
           <!-- خلي اللِّيبِل عنوان مجموعة بدون for -->
           <label>Relevant Experience:</label>
-          <br>
           <input type="text" id="experience1" name="experience[]" placeholder="Experience 1">
           <br>
-            
+            <br>
           <input type="text" id="experience2" name="experience[]" placeholder="Experience 2">
             <br>
-            
+            <br>
           <input type="text" id="experience3" name="experience[]" placeholder="Experience 3">
           <br>
             <br>
             <br>
           <label for="skills">Skills & Qualifications:</label>
-        
-       
-          <textarea id="skills" name="skills" rows="5" cols="50" placeholder="List your skills and qualifications..."></textarea>
+          <textarea id="skills" name="skills" rows="4" cols="40" placeholder="List your skills and qualifications..."></textarea>
         </div>
 <br>
         <!-- Right -->
         <div class="right-side">
+  
           <label for="education">Education:</label>
-      
-          <textarea id="education" name="education" rows="5" cols="50" placeholder="List your educational background..."></textarea>
+          <textarea id="education" name="education" rows="4" cols="40" placeholder="List your educational background..."></textarea>
 <br>
             <br>
             <br>
           <label for="message">General message:</label>
-          <textarea id="message" name="message" rows="5" cols="50" placeholder="Enter your message..."></textarea>
+          <textarea id="message" name="message" rows="4" cols="40" placeholder="Enter your message..."></textarea>
         </div>
       </div>
-      <button type="submit" class="button">Submit Application</button>
+      <button type="submit" class="btnApp">Submit Application</button>
     </fieldset>
   </form>
 </section>
@@ -181,6 +169,10 @@
 <div class="footer-left">
 <p>&reg; 2025 Critter care. All rights reserved.</p>
 </div>
+<!-- clock -->
+        <div class="footer-clock">
+            <span id="realTimeClock"></span>
+        </div>
 <div class="footer-right">
  <h4>Contact Info</h4>
 <ul class="footer-list">

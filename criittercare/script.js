@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const backToTopButton = document.getElementById('backToTop');
     
     if (backToTopButton) {
-        // Show/hide button based on scroll position
         window.addEventListener('scroll', function() {
             if (window.pageYOffset > 400) {
                 backToTopButton.classList.add('show');
@@ -12,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // Scroll to top when clicked
         backToTopButton.addEventListener('click', function() {
             window.scrollTo({
                 top: 0,
@@ -20,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
         
-        // Remove the content from the button
         backToTopButton.textContent = '';
     }
 });
@@ -53,4 +50,66 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Update every second (1000 milliseconds)
     setInterval(updateClock, 1000);
+});
+
+
+
+
+
+// FAQ 
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('newq');
+    const container = document.querySelector('.faq-container');
+    
+    // Load saved questions when page opens
+    loadQuestions();
+    
+    // When form is submitted
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const input = document.getElementById('userQuestion');
+        const question = input.value.trim();
+        
+        if (question) {
+            addQuestion(question);
+            saveQuestion(question);
+            input.value = '';
+            alert('Question submitted!');
+        }
+    });
+    
+    // Add question to page
+    function addQuestion(question) {
+        const faqCount = document.querySelectorAll('.faq-item').length;
+        const newId = 'faq' + (faqCount + 1);
+        
+        const newFaq = document.createElement('div');
+        newFaq.className = 'faq-item';
+        newFaq.innerHTML = '<input type="checkbox" id="' + newId + '" class="faq-toggle">' +
+                          '<label for="' + newId + '" class="faq-question">' +
+                          '<h3>' + question + '</h3>' +
+                          '<span class="faq-icon">+</span>' +
+                          '</label>' +
+                          '<div class="faq-answer">' +
+                          '<p>Thank you for your question! We will review it and post an answer soon.</p>' +
+                          '</div>';
+        
+        container.appendChild(newFaq);
+    }
+    
+    // Save question to browser storage
+    function saveQuestion(question) {
+        var savedQuestions = JSON.parse(localStorage.getItem('faqQuestions')) || [];
+        savedQuestions.push(question);
+        localStorage.setItem('faqQuestions', JSON.stringify(savedQuestions));
+    }
+    
+    // Load questions from storage
+    function loadQuestions() {
+        var savedQuestions = JSON.parse(localStorage.getItem('faqQuestions')) || [];
+        for (var i = 0; i < savedQuestions.length; i++) {
+            addQuestion(savedQuestions[i]);
+        }
+    }
 });
