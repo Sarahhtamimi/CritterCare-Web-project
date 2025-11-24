@@ -1163,7 +1163,7 @@ body{
 .form-columns{
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-between ;
 	margin: 20px;
 }
 div.staff-member img{
@@ -1177,12 +1177,19 @@ div.staff-member img{
 	 background: #ece4f7;
 	 border: 1px solid #cfcfcf;
 	 border-radius: 24px;
+<<<<<<< Updated upstream
 	 padding: 28px 28px 22px;
 	 max-width: 850px;
 	 margin: 10px auto;
    font-family: 'Courier New', Courier, monospace;
    font-size: larger;
    
+=======
+	 padding: 50;
+   font-size: 20px;
+
+	 margin: 10px 175px;
+>>>>>>> Stashed changes
  }
  .application-form fieldset{
 	 background: #ece4f7;
@@ -1194,20 +1201,22 @@ div.staff-member img{
 	 font-weight: 700;
 	 text-align: center;
 	 color: #333;
-	 padding: 0 12px;
+	 padding: 30px ;
 	 margin-bottom: 14px;
  
  }
 .form-sections{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
 
 }
 .left-side{
   flex:3;
   align-items: flex-start;
 	left: 0%;
+  padding-left: 0;
+  margin-left: 0;
 }
 .middle-side{
   flex:3;
@@ -1218,6 +1227,8 @@ div.staff-member img{
   flex:3;
   align-items: flex-end;
 	right: 0%;
+  padding-right: 0;
+  margin-right: 0;
 }
 
   .application-form input,
@@ -2219,7 +2230,6 @@ display: none;
    
   }
 
-  /* تأكد إن أي width سابق ما يخرب */
   .service-card {
     width: auto !important;
   }
