@@ -54,3 +54,104 @@ document.addEventListener('DOMContentLoaded', function() {
     // Update every second (1000 milliseconds)
     setInterval(updateClock, 1000);
 });
+
+
+// FAQ Management Module with localStorage
+const FAQManager = {
+    STORAGE_KEY: 'userSubmittedFAQs',
+
+    init() {
+        this.form = document.getElementById('newq');
+        this.container = document.querySelector('.faq-container');
+        this.bindEvents();
+        this.loadStoredFAQs();
+    },
+
+    bindEvents() {
+        this.form?.addEventListener('submit', (e) => this.handleSubmit(e));
+    },
+
+    handleSubmit(event) {
+        event.preventDefault();
+        
+        const questionInput = document.getElementById('userQuestion');
+        const question = questionInput.value.trim();
+
+        if (question) {
+            this.addQuestion(question);
+            this.showNotification('Question submitted successfully!');
+            questionInput.value = '';
+        }
+    },
+
+    addQuestion(question, isFromStorage = false) {
+        const newFaqId = this.generateFaqId();
+        const faqHTML = this.createFaqHTML(newFaqId, question);
+        
+        this.container.insertAdjacentHTML('beforeend', faqHTML);
+        
+        if (!isFromStorage) {
+            this.saveToStorage(question);
+        }
+    },
+
+    generateFaqId() {
+        const count = document.querySelectorAll('.faq-item').length;
+        return `faq${count + 1}`;
+    },
+
+    createFaqHTML(id, question) {
+        return `
+            <div class="faq-item">
+                <input type="checkbox" id="${id}" class="faq-toggle">
+                <label for="${id}" class="faq-question">
+                    <h3>${this.escapeHTML(question)}</h3>
+                    <span class="faq-icon">+</span>
+                </label>
+                <div class="faq-answer">
+                    <p>Thank you for your question! Our team will review it and add an answer soon.</p>
+                </div>
+            </div>
+        `;
+    },
+
+    saveToStorage(question) {
+        const existingFAQs = this.getStoredFAQs();
+        existingFAQs.push({
+            question: question,
+            timestamp: new Date().toISOString()
+        });
+        localStorage.setItem(this.STORAGE_KEY, JSON.stringify(existingFAQs));
+    },
+
+    getStoredFAQs() {
+        const stored = localStorage.getItem(this.STORAGE_KEY);
+        return stored ? JSON.parse(stored) : [];
+    },
+
+    loadStoredFAQs() {
+        const storedFAQs = this.getStoredFAQs();
+        storedFAQs.forEach(faq => {
+            this.addQuestion(faq.question, true);
+        });
+    },
+
+    escapeHTML(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    },
+
+    showNotification(message) {
+        const notification = document.createElement('div');
+        notification.className = 'faq-notification';
+        notification.textContent = message;
+        
+        document.body.appendChild(notification);
+        
+        setTimeout(() => notification.remove(), 3000);
+    }
+};
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => FAQManager.init());
