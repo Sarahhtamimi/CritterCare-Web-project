@@ -135,3 +135,63 @@ if (themeBtn) {
     }
   });
 }
+
+// ===== Join the Team form validation (About Us) =====
+function validateJoinForm(e) {
+    if (e) {
+        e.preventDefault();
+    }
+
+    var nameInput  = document.getElementById("name");
+    var emailInput = document.getElementById("email");
+    var dobInput   = document.getElementById("DoB");
+    var photoInput = document.getElementById("photo");
+
+    var name  = nameInput.value.trim();
+    var email = emailInput.value.trim();
+    var dob   = dobInput.value;
+    var photo = photoInput.value;
+
+    if (name === "" || email === "" || dob === "" || photo === "") {
+        alert("Please fill in all fields.");
+        if (name === "") nameInput.focus();
+        else if (email === "") emailInput.focus();
+        else if (dob === "") dobInput.focus();
+        else photoInput.focus();
+        return false; 
+    }
+
+    var startsWithNumber = /^[0-9]/;
+    if (startsWithNumber.test(name)) {
+        alert("Name cannot start with a number.");
+        nameInput.focus();
+        return false;
+    }
+
+    
+    var imgRegex = /\.(jpg|jpeg|png|gif|bmp|webp)$/i;
+    if (!imgRegex.test(photo)) {
+        alert("Photo must be an image file.");
+        photoInput.value = "";
+        photoInput.focus();
+        return false;
+    }
+
+    var year = parseInt(dob.substring(0, 4), 10);
+    if (year > 2008) {
+        alert("Date of birth must be in 2008 or earlier.");
+        dobInput.focus();
+        return false;
+    }
+
+    alert("Thank you, " + name + "! Your application has been submitted.");
+    return true;
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    var joinForm = document.getElementById("applicationForm");
+    if (joinForm) {
+        joinForm.addEventListener("submit", validateJoinForm);
+    }
+});
+
