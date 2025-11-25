@@ -2078,7 +2078,7 @@ form select {
     top: 70px;
     right: 0;
     width: 100%;
-    background: #7C6BA1;
+    background: var(--nav-bg);
     padding: 15px 0;
     flex-direction: column;
     text-align: center;
@@ -2232,7 +2232,7 @@ form label {
     transition: max-height 0.35s ease;
   }
 
-  /* لما يتشيّك الـ checkbox: يطلع النص */
+  
   .vm-toggle:checked + label + p {
     display: block;
     max-height: 300px;      /* ارتفاع كافي للتمدد */
