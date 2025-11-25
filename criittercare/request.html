@@ -39,7 +39,7 @@
 <main id="request">
 <h2 class="about-title">How can we help?</h2>
 <p class="lead">Just complete the form and we’ll take care of everything</p>
-<form action="#" method="post" class="form-card">
+<form action="#" method="post" class="form-card" onsubmit="return validateRequest()">
 <fieldset>
 <legend>Service request form</legend>
 
@@ -52,7 +52,7 @@
 <option value="Veterninary-check-up">Veterninary check-up</option>
 </select><br><br>
 
-<label for="name">Youra name:</label><br>
+<label for="name">Your name:</label><br>
 <input type="text" id="name" name="Customer-name" placeholder="Customer’s name" required><br><br>
 
 <label>Due date:</label><br>
@@ -66,6 +66,8 @@
 
 
 </form>
+<section id="requestList"></section>
+
 </main>
 <!-- ===== end of my work ===== -->
 <footer>
