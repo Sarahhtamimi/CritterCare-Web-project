@@ -270,26 +270,26 @@ function validateRequest() {
     alert("Name must not contain numbers or ? ! @.");
     return false;
   }
-  // 3) 
+  // 3) Valdate date
   if (date === "") {
     alert("Please choose a due date.");
     return false;
   }
 
-  // 4) 
+  // 4)  Valdate the description
   if (details.length < 100) {
     alert("Description must be at least 100 characters.");
     return false;
   }
-  // رسالة تأكيد + خيار البقاء أو الرجوع
+  // Stay or 
   var stay = confirm("Your request was sent.\nOK: stay on this page\nCancel: go to dashboard");
 
-  // نخزن الطلب في الـ array
+  //Store service 
   var info = "Service: " + service + " | Name: " + name + " | Date: " + date;
   pageRequests.push(info);
 
   if (stay) {
-    // نعرض كل الطلبات اللي صارت في هذي الجلسة
+    // Display the request list
     var list = document.getElementById("requestList");
     list.innerHTML = "<h3>Your requests on this page</h3>";
 
@@ -297,11 +297,11 @@ function validateRequest() {
       list.innerHTML += "<p>" + (j + 1) + ". " + pageRequests[j] + "</p>";
     }
 
-    // نفرغ الفورم عشان يقدر يرسل طلب جديد
+    //Make it empty to store new
     document.querySelector("#request form").reset();
-    return false; // نوقف الإرسال
+    return false; 
   } else {
-    // يرجع للداشبورد – الطلبات ما تنخزن في أي مكان دائم
+    // Back to dashboard 
     document.location.href = "customer-dashboard.html";
     return false;
   }
