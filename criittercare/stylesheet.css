@@ -57,7 +57,8 @@ form select:focus {
 }
 /* Buttons */
 
-form input[type="submit"] {
+form input[type="submit"],
+form button[type="submit"] {
     width: 200px;
     padding: 12px;
     background: #7C6BA1;
@@ -1179,7 +1180,6 @@ div.staff-member img{
 	 border-radius: 24px;
 	 padding: 50;
    font-size: 20px;
-
 	 margin: 10px 175px;
  }
  .application-form fieldset{
@@ -2042,8 +2042,9 @@ display: none;
   border-left: 0px solid ;
 }
 .application-form {
-    padding: 12px;
-    margin: 20px;
+    padding: 15px;
+    margin: 29px;
+  
   }
 
   .form-sections {
@@ -2054,12 +2055,16 @@ display: none;
   .right-side {
     flex: 1 1 100%;
   }
-
+form label {
+    font-size: 14px !important;
+}
   .application-form input,
   .application-form select,
-  .application-form textarea {
-    width: 75%;  
-    font-size: 20px;            /* كل الحقول عرض كامل */
+  .application-form textarea ,
+  .add-staff-form input{
+    width: 77%;  
+    font-size: 10px;
+    height: 2px;          
   }
 
   fieldset {
@@ -2124,7 +2129,6 @@ display: none;
     padding: 10px 12px;
   }
 
-  /* العنوان نفسه */
   .vm-block h2 {
     margin: 0;
   }
@@ -2181,9 +2185,9 @@ display: none;
   transform: rotate(45deg); }  
 
 .services-container {
-    display: flex !important;        /* غصب يصير flex */
-    flex-wrap: nowrap !important;    /* يمنع النزول تحت بعض */
-    overflow-x: auto !important;     /* سكروول أفقي */
+    display: flex ;        /* غصب يصير flex */
+    flex-wrap: nowrap ;    /* يمنع النزول تحت بعض */
+    overflow-x: auto ;     /* سكروول أفقي */
     overflow-y: hidden;
     gap: 16px;
     padding: 10px 15px 20px;
@@ -2200,12 +2204,12 @@ display: none;
   }
 
   .service {
-    width: auto !important;
+    width: auto;
   }
 .services-grid {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
+    display: flex ;
+    flex-direction: row ;
+    flex-wrap: nowrap ;
 
     overflow-x: auto !important;
     overflow-y: hidden;
@@ -2215,9 +2219,8 @@ display: none;
   }
 
   .services-grid .service-card {
-    flex: 0 0 75% ;       /* حجم كبير ومناسب للجوال */
+    flex: 0 0 75% ;   
     max-width: 300px ;
-   
   }
 
   .service-card {
@@ -2258,5 +2261,59 @@ display: none;
     from { transform: translateX(100%); opacity: 0; }
     to { transform: translateX(0); opacity: 1; }
 }
+.add-staff-form label,
+.add-service-form label,
+.add-faq-form label {
+    font-size: 14px !important;
 }
+
+  /* ... الأكواد اللي عندك أصلاً ... */
+
+  /* ===== Manage Staff Forms on mobile ===== */
+  .delete-form,
+  .add-staff-form {
+    padding: 16px 14px;
+    margin: 20px 12px;
+    max-width: 100%;
+    display: block;
+  }
+
+  .add-staff-form div,
+  .delete-form div {
+    width: 100%;
+  }
+
+  .add-staff-form input,
+  .add-staff-form textarea {
+    width: 30%;
+    height: 20%;
+    font-size: 13px;
+  }
+
+  .skill-block {
+    padding: 10px;
+     width: 9ch;
+    height: 60%;
+    margin: 2px
+  }
+
+  .dob-row {
+    flex-direction: row;
+    gap: 6px;
+  }
+
+  .checkbox-column {
+    height: 220px;     
+    font-size: 14px;
+  }
+
+  .delete-form button,
+  .add-staff-form button {
+    width: 70%;
+    font-size: 14px;
+  }
+}
+
+
+
 
