@@ -143,6 +143,7 @@ body{
 	color: white;
 	margin: 0;
 }
+
 nav ul{
 	list-style: none;
 	display: flex;
@@ -312,6 +313,9 @@ body{
 
 
 /* ====== HOME PAGE ====== */
+.v-icon{
+  display : none;
+}
 .home-body {
     background-color: #fafafa;
     color: #333;
@@ -2114,11 +2118,10 @@ form label {
 }
 .vm-section {
     display: flex;
-    flex-direction: column;   /* تحت بعض */
+    flex-direction: column;
     gap: 16px;
   }
 
-  /* نخفي الخط اللي بالنص في الموبايل */
   .vm-divider {
     display: none;
   }
@@ -2126,68 +2129,60 @@ form label {
   .vm-block {
     background-color: #ffffff;
     border-radius: 12px;
-    padding: 10px 12px;
+    padding: 10px;
   }
 
-  .vm-block h2 {
-    margin: 0;
-  }
-
-  .vm-block h2 label {
+  .vm-block label {
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 10px;
+    padding: 10px 14px;
     border-radius: 8px;
-    background-color: #f3eefc;   /* بنفسجي فاتح */
-    font-size: 1.1rem;
+    background-color: #f4f2f7;
+  }
+
+  .vm-block h2 {
+    margin: 0;
+    font-size: 2.1rem;
+    color: #5b4b8a;
     font-weight: 600;
   }
 
-  .vm-block p {
-    display: none;
-    margin-top: 8px;
-  }
-
-  
-  .vm-toggle:checked ~ p {
+  .v-icon {
     display: block;
-    padding: 10px 12px;
-    background-color: #fbf9ff;
-    border-radius: 8px;
-    max-height: 150px;   
-    overflow-y: auto;
-  }
-  .vm-block  {
-  font-size: 1.4rem;
-  color: #7C6BA1;
-  font-weight: bold;
-  margin-left: 8px;
-}
-.vm-block {
-  font-size: 1.4rem;
-  color: #7C6BA1;
-  font-weight: bold;
-  margin-left: 8px;
-}
-.vm-block :hover {
-    background-color: #faf9ff;
-  }
-  .faq-icon{
     font-size: 1.5rem;
-  color: #7C6BA1;
-  font-weight: bold;
-  transition: transform 0.3s ease;
+    color: #7C6BA1;
+    font-weight: bold;
+    transition: transform 0.3s ease;
   }
-  
-  .vm-toggle:checked ~ .faq-icon {
-  transform: rotate(45deg); }  
 
+  /* النص يكون مخفي مبدئياً */
+  .vm-block p {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 14px;
+    background-color: #fbf9ff;
+    border-radius: 0 0 8px 8px;
+    line-height: 1.6;
+    transition: max-height 0.35s ease;
+  }
+
+  /* لما يتشيّك الـ checkbox: يطلع النص */
+  .vm-toggle:checked + label + p {
+    display: block;
+    max-height: 300px;      /* ارتفاع كافي للتمدد */
+    padding: 10px 14px 14px;
+  }
+
+  /* ونلف علامة + زي الـ FAQ */
+  .vm-toggle:checked + label .v-icon {
+    transform: rotate(45deg);
+  }
 .services-container {
-    display: flex ;        /* غصب يصير flex */
-    flex-wrap: nowrap ;    /* يمنع النزول تحت بعض */
-    overflow-x: auto ;     /* سكروول أفقي */
+    display: flex ;      
+    flex-wrap: nowrap ;  
+    overflow-x: auto ;  
     overflow-y: hidden;
     gap: 16px;
     padding: 10px 15px 20px;
@@ -2241,9 +2236,6 @@ form label {
     width: 90% ;
     max-width: 400px;
 }
-
-
-
 .faq-notification {
     position: fixed;
     top: 20px;
@@ -2266,10 +2258,6 @@ form label {
 .add-faq-form label {
     font-size: 14px !important;
 }
-
-  /* ... الأكواد اللي عندك أصلاً ... */
-
-  /* ===== Manage Staff Forms on mobile ===== */
   .delete-form,
   .add-staff-form {
     padding: 16px 14px;
@@ -2312,6 +2300,7 @@ form label {
     width: 70%;
     font-size: 14px;
   }
+ 
 }
 
 
