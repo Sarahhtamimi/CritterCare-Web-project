@@ -2214,7 +2214,6 @@ display: none;
     margin: 0;
   }
 
-  /* كل كرت يكون عرضه ثابت */
   .services-grid .service-card {
     flex: 0 0 75% ;       /* حجم كبير ومناسب للجوال */
     max-width: 300px ;
