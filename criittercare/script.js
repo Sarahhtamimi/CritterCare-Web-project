@@ -196,23 +196,25 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Evaluation page:-
+//In this page we have two thing ti validate (Service/ Rating)
 function validateEvaluation() {
-  //To read the service and the feedback from form
+  //To read the service and the rating from form
   var service = document.getElementById("service").value;
   var feedback = document.getElementById("feedback").value;
 
-  // To read star value
+  // To read star value from 1- 5
   var ratingValue = "";
-  var radios = document.getElementsByName("rating");
-  for (var i = 0; i < radios.length; i++) {
-    if (radios[i].checked) {
-      ratingValue = radios[i].value;
-    }
+var radios = document.getElementsByName("rating");
+for (var i = 0; i < radios.length; i++) {
+  if (radios[i].checked) {
+    ratingValue = radios[i].value;
   }
+}
+
 
   //If it empty plz fill it
   if (service === "") {
-    alert("Please select a service.");
+    alert("There is no service selected.");
     return false; //The form will not sent
   }
   //If it empty plz fill it
@@ -220,45 +222,49 @@ function validateEvaluation() {
     alert("Please select a rating.");
     return false;//The form will not sent
   }
-   //If it empty plz fill it
+   //If it empty plz fill it ========
   if (feedback.trim() === "") {
     alert("Please write your feedback.");
     return false;//The form will not sent
   }
 
-  //If the rating is low  or high 
+  //If it here then the valdation is good we will diasplay massage acording to the rating if it is low  or high 
   if (parseInt(ratingValue) >= 4) {
     alert("Thank you for your positive feedback!");
   } else {
     alert("We are sorry for your experience. We will try to improve.");
   }
 
-  // To go for the customer dashboard page
+  // To tranfer  to the customer dashboard page
   document.location.href = "customer-dashboard.html";
   return false; 
 }
-// To store the request in the array
+
+
+//Request page:-
+// To store the request in the array to display it
 var pageRequests = [];   
   
 function validateRequest() {
+
+  //To get the valus for each option:
   var service = document.getElementById("service").value;
   var name = document.getElementById("name").value.trim();
   var date = document.getElementById("date").value;
-  var details = document.getElementById("details").value.trim();
 
-  // 1)There isnt service 
+  // I sthere is selected service?
   if (service === "") {
-    alert("Please select a service.");
+    alert("There is no selectedv service.");
     return false;
   }
 
-  // 2) Full name and charcters 
+  // I sit Full name ? 
   var parts = name.split(" ");
   if (name === "" || parts.length < 2) {
     alert("Please enter full name (first and last).");
     return false;
   }
-
+   //Is it contain spical charcter?
   var hasBadChar = false;
   for (var i = 0; i < name.length; i++) {
     var ch = name.charAt(i);
@@ -270,21 +276,47 @@ function validateRequest() {
     alert("Name must not contain numbers or ? ! @.");
     return false;
   }
-  // 3) Valdate date
-  if (date === "") {
+  
+
+  //Valdate the date:
+  //Is there is date?
+if (date === "") {
     alert("Please choose a due date.");
     return false;
-  }
+}
+//To take the day date for now 
+var today = new Date();
+today.setHours(0, 0, 0, 0);
 
-  // 4)  Valdate the description
+//To take the selected date
+var selected = new Date(date);
+
+// I s date in the past?
+if (selected < today) {
+    alert("Invalid date. Please choose a future date.");
+    return false;
+}
+
+// To see how many days between?
+var diffInDays = (selected - today) / (1000 * 60 * 60 * 24);
+
+// If it very neer 
+if (diffInDays < 3) {
+    alert("Due date is very soon. Please choose a later date.");
+    return false;
+}
+
+  var details = document.getElementById("details").value.trim();
+
+  // Valdate the description very short
   if (details.length < 100) {
-    alert("Description must be at least 100 characters.");
+    alert("Description is very short, must be at least 100 characters.");
     return false;
   }
-  // Stay or 
+  // Stay or go to dashbord page
   var stay = confirm("Your request was sent.\nOK: stay on this page\nCancel: go to dashboard");
 
-  //Store service 
+  //Store service if it stay in the page
   var info = "Service: " + service + " | Name: " + name + " | Date: " + date;
   pageRequests.push(info);
 
@@ -302,6 +334,7 @@ function validateRequest() {
     return false; 
   } else {
     // Back to dashboard 
+
     document.location.href = "customer-dashboard.html";
     return false;
   }
