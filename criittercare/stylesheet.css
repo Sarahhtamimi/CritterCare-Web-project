@@ -1622,7 +1622,7 @@ h3.lead{
 }
 
 .cardProvider:active {
-    background-color: var(--text-color);;
+    background-color: var(--text-color);
     transform: translateY(0);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
