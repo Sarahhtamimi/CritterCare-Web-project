@@ -1583,7 +1583,7 @@ h3.lead{
     display: block;
     width: 10px;
     height: 4px;
-    background-color: #7C6BA1;
+    background-color: var(--form-color);
     margin: 0 auto 0;
     border-radius: 2px;
 }
@@ -1600,7 +1600,7 @@ h3.lead{
 }
 
 .cardProvider {
-    background: #fff;
+    background: var(--text-color);
     padding: 0px 0px 10px 0px;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
@@ -1621,7 +1621,7 @@ h3.lead{
 }
 
 .cardProvider:active {
-    background-color: #f1eff8;
+    background-color: var(--text-color);;
     transform: translateY(0);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
@@ -1636,7 +1636,7 @@ h3.lead{
 .cardProvider h3 {
     margin: 1px 0 1px;
     font-size: 1.1rem;
-    color: #5b4b8a;
+    color:var(--text-color);
     font-weight: 600;
     padding: 0 15px;
 }
@@ -1644,14 +1644,14 @@ h3.lead{
 .cardProvider p {
     margin: 0 15px 1px;
     font-size: 0.95rem;
-    color: #555555;
+    color:var(--text-color);
     padding: 20px 12px;
 }
 
 .form-sectionProvider {
     text-align: center;
     margin: 0 0 40px;
-    color: #333;
+    color:var(--text-color);
     font-size: 20px;
     font-weight: 700;
     position: relative;
@@ -1663,7 +1663,7 @@ h3.lead{
     display: block;
     width: 100px;
     height: 4px;
-    background-color: #7C6BA1;
+    background-color:var(--form-color);
     margin: 15px auto 0;
     border-radius: 2px;
 }
@@ -1671,14 +1671,14 @@ h3.lead{
 .form-sectionProvider p {
     margin: 14px 0 6px;
     font-size: 1.1rem;
-    color: #5b4b8a;
+    color:var(--text-color);
     font-weight: 600;
     padding: 0 15px;
 }
 /* ===== Add New Service====== */
 .add-service-container{
-    background: #ece4f7;
-    border: 1px solid #cfcfcf;
+    background: var(--form-color);
+    border: 1px solid var(--form-color);
     border-radius: 24px;
     padding: 28px 28px 22px;
     max-width: 850px;
@@ -1690,7 +1690,7 @@ h3.lead{
     font-size: 24px;
     font-weight: 700;
     text-align: center;
-    color: #333;
+    color:var(--text-color);
     padding: 0 12px;
     margin-bottom: 14px;
 }
@@ -1699,7 +1699,7 @@ h3.lead{
     display: block;
     width: 100px;
     height: 4px;
-    background-color: #7C6BA1;
+    background-color: var(--text-color);
     margin: 15px auto 0;
     border-radius: 2px;
 
@@ -1708,7 +1708,7 @@ h3.lead{
     display: block;
     margin: 6px 0;
     font-size: 18px;
-    color: #333;
+    color: var(--form-color);
 }
 
 .add-form input[type="text"],
@@ -1716,9 +1716,9 @@ h3.lead{
  {
     width:60%;
     padding: 8px;
-    border: 1px solid black;
+    border: 1px solid var(--text-color);
    
-    background: white;
+    background: var(--text-color);
 }
 .add-form input[type="number"]{
  width:40%;
@@ -1726,13 +1726,13 @@ h3.lead{
     border: 1px solid black;
     border-radius: 4px;
   
-    background: white;
+    background:var(--form-color) ;
 }
 .add-form textarea {
     height: 50px;
     resize: vertical;
     width:250px;
-     border: 1px solid black;
+     border: 1px solid  var(--text-color);
 }
 
 
@@ -1750,12 +1750,12 @@ h3.lead{
 .file-box {
     display: inline-block;
     padding: 10px;
-    border: 1px solid black;
+    border: 1px solid var(--text-color);
     border-radius: 4px;
-    background-color: white;
+    background-color:var(--text-color);
     cursor: pointer;
     text-align: center;
-    color: #7C6BA1;
+    color:var(--text-color);
    
 }
 
@@ -1770,8 +1770,8 @@ display: none;
     margin: 20px auto;
     padding: 10px;
     border: none;
-    background-color: #7C6BA1;
-    color: white;
+    background-color:var(--text-color);
+    color: var(--text-color);
     font-weight: 600;
     border-radius: 8px;
     cursor: pointer; 
@@ -1787,8 +1787,8 @@ display: none;
     padding: 12px 30px;
     border: 0;
     border-radius: 8px;
-    background: #7C6BA1;
-    color: #fff;
+    background: var(--text-color);
+    color:var(--text-color);
     font-weight: 600;
     cursor: pointer;
     justify-self: center;
@@ -1802,7 +1802,7 @@ display: none;
 }
 
 .add-form button:hover {
-    background: #6a5a8f;
+    background: var(--text-color);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(124, 107, 161, 0.3);
 }
@@ -1815,7 +1815,7 @@ display: none;
 /* Manage Staff Sections */
 .add-staff-form,
 .delete-form {
-    background: #ece4f7;
+    background:  var(--bg-color);
     border-radius: 16px;
     padding: 50px 40px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -1830,7 +1830,7 @@ display: none;
 .add-staff-form h2,
 .delete-form h3 {
     text-align: center;
-    color: #333;
+    color:var(--text-color);
     margin-bottom: 25px;
     font-weight: 700;
     position: relative;
@@ -1843,7 +1843,7 @@ display: none;
     display: block;
     width: 80px;
     height: 3px;
-    background-color: #7C6BA1;
+    background-color:var(--form-color) ;
     margin: 10px auto 0;
     border-radius: 2px;
 }
@@ -1864,7 +1864,7 @@ display: none;
     align-items: center;
     gap: 12px;
     font-size: 1rem;
-    color: #333;
+    color: var(--text-color);
     cursor: pointer;
     padding: 8px 12px;
     border-radius: 6px;
@@ -1873,27 +1873,27 @@ display: none;
 }
 
 .checkbox-column label:hover {
-    background-color: #faf9ff;
+    background-color: var(--text-color);
 }
 
 .checkbox-column img {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    border: 2px solid #7C6BA1;
+    border: 2px solidvar(--text-color);
     object-fit: cover;
 }
 
 .checkbox-column input[type="checkbox"] {
     width: 18px;
     height: 18px;
-    accent-color: #7C6BA1;
+    accent-color:var(--text-color);
 }
 
 /* Delete form button */
 .delete-form button {
-    background-color: #7C6BA1;
-    color: white;
+    background-color:var(--text-color);
+    color: var(--text-color);
     border: 0;
     padding: 12px 30px;
     border-radius: 8px;
@@ -1908,7 +1908,7 @@ display: none;
 }
 
 .delete-form button:hover {
-    background-color: #a93226;
+    background-color: var(--text-color);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(192, 57, 43, 0.3);
 }
@@ -1923,8 +1923,8 @@ display: none;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px 40px;
-  background: #ece4f7;
-  border: 1px solid #cfcfcf;
+  background: var(--form-color) ;
+  border: 1px solid var(--form-color) ;
   border-radius: 24px;
   padding: 28px;
   max-width: 850px;
@@ -1936,19 +1936,19 @@ display: none;
 .add-staff-form label {
   margin-bottom: 6px;
   display: block;
-  color: #333;
+  color: var(--text-color);
 }
 
 /* Inputs */
 .add-staff-form input {
   width: 70%;
   padding: 10px;
-  border: 1px solid black;
+  border: 1px solid var(--text-color);
   border-radius: 4px;
   margin-bottom: 16px;
 }
 .add-staff-form input:focus {
-  outline: 2px solid #000;
+  outline: 2px solid var(--text-color);
 }
 
 
@@ -1959,7 +1959,7 @@ display: none;
   grid-column: 1 / -1;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #333;
+  color: var(--text-color);
   position: relative;
 }
 
@@ -1969,7 +1969,7 @@ display: none;
   display: block;
   width: 80px;
   height: 3px;
-  background: #7C6BA1;
+  background: var(--text-color);
   margin: 10px auto 0;
   border-radius: 3px;
 }
@@ -1986,18 +1986,18 @@ display: none;
 
 /* Skills Box */
 .skill-block {
-  background: #ece4f7;
+  background:var(--form-color);
   padding: 15px;
   border-radius: 8px;
   margin-bottom: 20px;
 }
 .skill-main {
   font-weight: bold;
-  background: white;
+  background:var(--form-color);
   padding: 10px 15px;
   margin: -15px -15px 15px -15px;
   border-radius: 8px 8px 0 0;
-  color: #5b4b8a;
+  color:var(--form-color);
 }
 .subskills input {
   width: 95%;
@@ -2008,8 +2008,8 @@ display: none;
 .add-staff-form button {
   grid-column: 1 / -1;
   justify-self: center;
-  background: #7C6BA1;
-  color: #fff;
+  background:var(--text-color);
+  color: var(--text-color);
   border: none;
   padding: 12px 30px;
   border-radius: 8px;
@@ -2021,7 +2021,7 @@ display: none;
   transition: 0.3s ease;
 }
 .add-staff-form button:hover {
-  background: #6a5a8f;
+  background:var(--text-color);
   transform: translateY(-2px);
 }
 .add-staff-form button:active {
@@ -2049,7 +2049,7 @@ form input[type="password"],
 form input[type="file"],
 form textarea,
 form select {
-    background: whitesmoke;
+    background: var(--text-color);
 }
 
 
