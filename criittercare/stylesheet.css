@@ -1413,6 +1413,7 @@ td ul li{
 /*For cards body(TEXT)*/
 .cards{
   margin: 14px 0 6px;
+  border: 1px solid var(--form-border);
 	padding-bottom: 20px;
   color: var(--h2-color);
   font-weight: 600;
