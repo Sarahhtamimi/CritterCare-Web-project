@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('newq');
     const container = document.querySelector('.faq-container');
-    
+   
     // Load saved questions when page opens
     loadQuestions();
     
@@ -339,4 +339,299 @@ if (diffInDays < 3) {
     return false;
   }
 }
+// service provider 
+document.addEventListener("DOMContentLoaded", function(){
 
+    let services = localStorage.getItem("services");
+    services = services ? JSON.parse(services) : [];
+
+    let box = document.getElementById("services-container");
+
+    if(services.length === 0){
+        box.innerHTML = "<p> No services added yet </p>";
+        return;
+    }
+
+    services.forEach(function(s){
+        let div = document.createElement("div");
+        div.className = "cardProvider";
+
+        div.innerHTML = `
+            <img src="${s.photo}" alt="service img">
+            <p>${s.name}</p>
+            <p>${s.price} SAR</p>
+        `;
+
+        box.appendChild(div);
+    });
+
+});
+//add form
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.querySelector(".add-form");
+    if (!form) return;
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        let name = document.getElementById("service-name").value.trim();
+        let desc = document.getElementById("service-description").value.trim();
+        let price = document.getElementById("service-price").value.trim();
+        let file = document.getElementById("service-photo");
+
+        if (name === "") {
+            alert("Please enter the service name.");
+            return;
+        }
+
+        if (/^[0-9\u0660-\u0669]/.test(name)) {
+         
+
+            alert("Service name cannot start with a number.");
+            return;
+        }
+
+        if (desc === "") {
+            alert("Please enter the description.");
+            return;
+        }
+
+        if (/^[0-9\u0660-\u0669]/.test(desc)) {
+            alert("Description cannot start with a number.");
+            return;
+        }
+
+        if (price === "") {
+            alert("Please enter the price.");
+            return;
+        }
+
+        if (isNaN(price)) {
+            alert("Price must be a number.");
+            return;
+        }
+
+        if (file.files.length === 0) {
+            alert("Please upload a photo.");
+            return;
+        }
+
+        let reader = new FileReader();
+        reader.onload = function () {
+            let newService = {
+                name: name,
+                description: desc,
+                price: price,
+                photo: reader.result
+            };
+
+            let list = JSON.parse(localStorage.getItem("services") || "[]");
+            list.push(newService);
+            localStorage.setItem("services", JSON.stringify(list));
+
+            alert("Service added successfully!");
+            form.reset();
+        };
+
+        reader.readAsDataURL(file.files[0]);
+    });
+});
+//manage staff members
+
+//  existing staff list
+let staffList = JSON.parse(localStorage.getItem("staffList")) || [
+    { name: "Sarah Altamimi", photo: "images/staff/staff2.png" },
+    { name: "Raneem Aloraini", photo: "images/staff/staff3.png" },
+    { name: "Aliyah Alharbi", photo: "images/staff/staff4.png" },
+    { name: "Leenah Altamimi", photo: "images/staff/staff5.png" },
+    { name: "Noura Almutairi", photo: "images/staff/staff6.png" },
+    { name: "Dana Alshammari", photo: "images/staff/staff7.png" }
+];
+
+function showStaff() {
+    let area = document.querySelector(".checkbox-column");
+    if (!area) return;
+
+    area.innerHTML = "";
+
+    staffList.forEach((st, i) => {
+        let row = `
+            <label>
+                <input type="checkbox" data-id="${i}">
+                <img src="${st.photo}" width="50" onerror="this.src='images/staff/default.png'">
+                ${st.name}
+            </label>
+        `;
+        area.innerHTML += row;
+    });
+}
+showStaff();
+
+
+// Delete Staff Member
+const deleteForm = document.querySelector(".delete-form");
+if (deleteForm) {
+    deleteForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        let checks = document.querySelectorAll(".checkbox-column input[type='checkbox']");
+        let picked = [];
+
+        checks.forEach(c => {
+            if (c.checked) picked.push(Number(c.dataset.id));
+        });
+
+        if (picked.length === 0) {
+            alert("select at least one staff member.");
+            return;
+        }
+
+        if (!confirm("Are you sure you want to delete the selected staff?")) return;
+
+        staffList = staffList.filter((_, index) => !picked.includes(index));
+        localStorage.setItem("staffList", JSON.stringify(staffList));
+        showStaff();
+        alert("Staff deleted successfully.");
+    });
+}
+
+
+// Add New Staff Member
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.querySelector(".add-staff-form");
+    if (!form) return;
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        //all filds
+        let inputs = form.querySelectorAll("input[type='text'], input[type='email'], textarea");
+
+        let digitStart  = /^[0-9\u0660-\u0669]/; 
+        let numbersOnly = /^[0-9]+$/;             // onlu num for date
+
+        // first name
+        let firstName = inputs[0].value.trim();
+        if (firstName === "") {
+            alert("First name is required");
+            return;
+        }
+        if (digitStart.test(firstName)) {
+            alert("First name cannot start with a number");
+            return;
+        }
+
+        // date
+        let day   = inputs[1].value.trim();
+        let month = inputs[2].value.trim();
+        let year  = inputs[3].value.trim();
+
+        // Day
+        if (day === "") {
+            alert("Day is required");
+            return;
+        }
+        if (!numbersOnly.test(day)) {
+            alert("Day must be numbers only");
+            return;
+        }
+
+        // Month
+        if (month === "") {
+            alert("Month is required");
+            return;
+        }
+        if (!numbersOnly.test(month)) {
+            alert("Month must be numbers only");
+            return;
+        }
+
+        // Year
+        if (year === "") {
+            alert("Year is required");
+            return;
+        }
+        if (!numbersOnly.test(year)) {
+            alert("Year must be numbers only");
+            return;
+        }
+
+        //  last name
+        let lastName = inputs[4].value.trim();
+        if (lastName === "") {
+            alert("Last name is required");
+            return;
+        }
+        if (digitStart.test(lastName)) {
+            alert("Last name cannot start with a number");
+            return;
+        }
+
+        //  Areas of expertise
+        for (let i = 5; i <= 7; i++) {
+            let v = inputs[i].value.trim();
+            if (v === "") {
+                alert("Expertise fields cannot be empty");
+                return;
+            }
+            if (digitStart.test(v)) {
+                alert("Expertise cannot start with a number");
+                return;
+            }
+        }
+
+        //  Email 
+        
+        let email = inputs[14].value.trim();
+        if (email === "") {
+            alert("Email is required");
+            return;
+        }
+        if (digitStart.test(email)) {
+            alert("Email cannot start with a number");
+            return;
+        }
+        //@ it must to be there
+        if (!email.includes("@")) { alert("Please enter a valid email"); return; }
+
+        // Education 
+       
+        let education = inputs[15].value.trim();
+        if (education === "") {
+            alert("Education is required");
+            return;
+        }
+        if (digitStart.test(education)) {
+            alert("Education cannot start with a number");
+            return;
+        }
+
+        //  Staff photo
+        let photo = document.getElementById("staff-photo");
+        if (!photo || photo.files.length === 0) {
+            alert("Staff photo is required");
+            return;
+        }
+
+        // add
+        let reader = new FileReader();
+
+        reader.onload = function () {
+            let fullName = firstName + " " + lastName;
+
+            staffList.push({
+                name: fullName,
+                photo: reader.result
+            });
+
+            localStorage.setItem("staffList", JSON.stringify(staffList));
+            alert("Staff Added Successfully");
+            form.reset();
+            showStaff();
+        };
+
+        reader.readAsDataURL(photo.files[0]);
+    });
+});
