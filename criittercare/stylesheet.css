@@ -11,12 +11,13 @@
   --card-color:#9190;
   --btns-color: #7C6BA1;
   --titleUnderline:#64518b;
-  --hover-color: #c0b9cfa4;
+  --hover-color: #beb0ce;
   --tHover-color:#564a6f;
   --tabelHeader-color:#816fa6; 
    --tabelCells-color:#d8c4dc93;
    --box-shadow--: rgba(0, 0, 0, 0.06);
    --form-border: #cfcfcf;
+   --br2-color: #ece4f7 ;
 }
 
 /* Dark theme */
@@ -51,14 +52,25 @@ body.dark-theme {
   bottom: 20px;
   left: 20px;
   background: var(--accent);
-  color: white;
   border: none;
-  padding: 12px 14px;
+  width: 48px;        
+  height: 48px;
+  padding: 0;         
   border-radius: 50%;
-  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;    
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   z-index: 2000;
   transition: 0.3s;
+}
+
+.theme-btn img {
+  width: 140%;         
+  height: 140%;
+  object-fit: contain;  
+  display: block;
 }
 
 .theme-btn:hover {
@@ -238,7 +250,7 @@ nav a:hover{
 
 /*========breadcrumbs===========*/
 .breadcrumbs {
-  background: var(--card-bg); 
+  background: var(--br-color); 
   padding: 0px 10px;
   font-size: 1rem;
   margin: 0px;
@@ -518,7 +530,7 @@ body{
 .service-overview h3 {
     margin: 14px 0 6px;
     font-size: 1.1rem;
-    color: #5b4b8a;
+    color: var(--h2-color);
     font-weight: 600;
     padding: 0 15px;
 }
@@ -526,7 +538,7 @@ body{
 .service-overview p {
     margin: 0 15px 18px;
     font-size: 0.95rem;
-    color: #555;
+    color: var(--text-color);
 }
 
 .service-hover-info {
@@ -535,7 +547,7 @@ body{
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(124, 107, 161, 0.95);
+    background: var(--hover-color);
     color: white;
     padding: 20px;
     display: flex;
@@ -595,7 +607,7 @@ body{
     margin: 60px 0 25px;
     font-weight: bold;
     font-size: 26px;
-    color: #333;
+    color: var(--secTitle-color);
     text-align: center;
 }
 
@@ -620,8 +632,8 @@ body{
 .review:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    border-color: #7C6BA1;
-    background-color: #faf9ff;
+    border-color: var(  --hover-color);
+    background-color: var(--hover-color);
 }
 
 .left {
@@ -642,13 +654,13 @@ body{
 }
 
 .bubble strong {
-    color: #333;
+    color: var(--text-color);
     font-size: 16px;
     display: block;
 }
 
 .service-name {
-    color: #7C6BA1;
+    color: var(--secTitle-color);
     font-size: 14px;
     font-weight: 600;
     display: block;
@@ -656,7 +668,7 @@ body{
 }
 
 .bubble p {
-    color: #555;
+    color: var(--text-color);
     font-size: 15px;
     margin: 10px 0 0 0; 
     line-height: 1.6;
@@ -686,7 +698,7 @@ body{
 .faq-title {
   text-align: center;
   margin: 0 0 40px;
-  color: #333;
+  color: var(--h2-color);
   font-size: 1.8rem;
   font-weight: 700;
   position: relative;
@@ -698,7 +710,7 @@ body{
   display: block;
   width: 100px;
   height: 4px;
-  background-color: #7C6BA1;
+  background-color: var(--titleUnderline);
   margin: 15px auto 0;
   border-radius: 2px;
 }
@@ -709,11 +721,11 @@ body{
 }
 
 .faq-item {
-  background: #fff;
+  background: var(--br2-bg);
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   margin-bottom: 16px;
-  border: 1px solid #f0f0f0;
+  border: 1px solid var(--br2-color);
   transition: all 0.3s ease;
 }
 
@@ -731,26 +743,26 @@ body{
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  background: #fff;
+  background: var(--br2-color);
   transition: background-color 0.3s ease;
   margin: 0;
 }
 
 .faq-question:hover {
-  background-color: #faf9ff;
+  background-color: var(--hover-color);
 }
 
 .faq-question h3 {
   margin: 0;
   font-size: 1.1rem;
-  color: #5b4b8a;
+  color: var(--secTitle-color);
   font-weight: 600;
   flex: 1;
 }
 
 .faq-icon {
   font-size: 1.5rem;
-  color: #7C6BA1;
+  color: var(--secTitle-color);
   font-weight: bold;
   transition: transform 0.3s ease;
 }
@@ -760,13 +772,13 @@ body{
   max-height: 0;
   overflow: hidden;
   transition: all 0.3s ease;
-  background: #fff;
+  background: var(--br2-color);
 }
 
 .faq-answer p {
   margin: 0;
   padding: 16px 0 0 0;
-  color: #555;
+  color: var(--text-color);
   font-size: 17px;
   line-height: 1.6;
 
@@ -783,7 +795,7 @@ body{
 }
 
  .faq-toggle:checked ~ .faq-question {
-  background-color: #f8f6ff;
+  background-color: var(--br2-color);
 }
 .faq-cta {
   padding: 30px;
@@ -793,13 +805,13 @@ body{
 }
 .faq-cta-text {
   font-size: 1.3rem;
-  color: #495057;
+  color: var(--secTitle-color);
   margin-bottom: 15px;
   font-weight: 540;
 }
 .faq-cta-link {
   display: inline-block;
-  background: linear-gradient(135deg, #806fa6 0%, #7a64aa 100%);
+  background: linear-gradient(135deg, var(--btns-color) 0%, #7a64aa 100%);
   color: white;
   text-decoration: none;
   padding: 12px 30px;
@@ -892,13 +904,13 @@ body{
   background: white;
   padding: 25px;
   border-radius: 10px;
-  border-color: #fff;
+  border-color: var(--btns-color);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .faq-form-title {
   font-size: 1.5rem;
-  color: #2c3e50;
+  color: var(--h2-color);
   margin-bottom: 25px;
   text-align: center;
   font-weight: bold;
@@ -907,16 +919,16 @@ body{
 .faq-form-group {
   margin-bottom: 20px;
   padding: 20px;
-  background: #f8f9fa;
+  background: var(--br-color);
   border-radius: 8px;
-  border-left: 4px solid #7C6BA1;
+  border-left: 4px solid var(--btns-color);
 }
 
 .faq-form-group label {
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
-  color: #2c3e50;
+  color: var(--secTitle-color);
   font-size: 1.1rem;
 }
 
@@ -1026,7 +1038,7 @@ body{
 
 .sort-container {
   display: inline-block;
-  background: #fff;
+  background: var(--br2-color);
   padding: 15px 25px;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
@@ -1034,12 +1046,12 @@ body{
 
 .sort-container label {
   font-weight: 600;
-  color: #333;
+  color: var(--secTitle-color);
   margin-right: 15px;
 }
 
 #sort-services:hover {
-  border-color: #7C6BA1;
+  border-color: var(--btns-color);
 }
 
 
@@ -1054,14 +1066,14 @@ body{
   padding: 8px 15px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  background: white;
+  background: var(--br2-bg);
   color: #333;
   font-size: 1rem;
 }
 
 #sort-services optgroup {
   font-weight: 600;
-  color: #5b4b8a;
+  color: #8a6d4b;
 }
 
 #sort-services option {
@@ -1079,18 +1091,18 @@ body{
 }
 
 .service-card {
-  background: #fff;
+  background: var(--br2-color);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   transition: all 0.3s ease;
-  border: 1px solid #f0f0f0;
+  border: 1px solid var(--br2-color);
 }
 
 .service-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-  background-color: #faf9ff;
+  background-color: var(--hover-color);
   
 }
 
@@ -1113,13 +1125,13 @@ body{
 
 .service-name {
   font-size: 1.3rem;
-  color: #5b4b8a;
+  color: var(--h2-color);
   margin-bottom: 10px;
   font-weight: 600;
 }
 
 .service-description {
-  color: #555;
+  color: var(--text-color);
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 15px;
@@ -1127,13 +1139,13 @@ body{
 
 .service-price {
   font-size: 1.1rem;
-  color: #7C6BA1;
+  color: var(--h2-color);
   font-weight: 600;
   margin: 0;
 }
 
 .service-card:active {
-	background-color: #f1eff8;
+	background-color: var(--btns-color);
 	transform: translateY(0);
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
@@ -1373,9 +1385,9 @@ td ul li{
   margin: 30px 0 60px; 
 }
 .cards{
-  background: var(--card-bg);
+  background: var(--br2-color);
     border-radius: 12px;
-    box-shadow: 0 2px 8px var(-box-shadow--);
+    box-shadow: 0 2px 8px var(--box-shadow-);
     overflow: hidden;
     text-align: center;
     cursor: pointer;
@@ -1572,7 +1584,7 @@ h3.lead{
 /*==========SERVICE PROVIDER DASHBOARD==========*/
 .ServiceProvideDashBoard {
     text-align: center;
-    color: var(--text-color);
+    color: var(--secTitle-color);
     margin-bottom: 30px;
     font-size: 2.4rem;
     font-weight: 800;
@@ -1584,8 +1596,8 @@ h3.lead{
     display: block;
     width: 10px;
     height: 4px;
-    background-color: var(--form-color);
-    margin: 0 auto 0;
+    background-color: var(--titleUnderline);
+    margin: 0 auto ;
     border-radius: 2px;
 }
 
@@ -1691,7 +1703,7 @@ h3.lead{
     font-size: 24px;
     font-weight: 700;
     text-align: center;
-    color:var(--text-color);
+    color:var(--h2-color);
     padding: 0 12px;
     margin-bottom: 14px;
 }
@@ -1718,15 +1730,14 @@ h3.lead{
     padding: 8px;
     border: 1px solid var(--text-color);
    
-    background: var(--text-color);
+    background: white;
 }
 .add-form input[type="number"]{
  width:40%;
     padding: 8px;
     border: 1px solid black;
     border-radius: 4px;
-  
-    background:var(--form-color) ;
+    background: white ;
 }
 .add-form textarea {
     height: 50px;
@@ -1758,7 +1769,6 @@ h3.lead{
     color:var(--text-color);
    
 }
-
 input[type="file"] {
 display: none;
 }
@@ -1778,7 +1788,7 @@ display: none;
 }
 
 .add-btn:hover{
-    filter: brightness(.95);
+    filter: brightness(.9);
 }
 
 .add-form button {
@@ -1802,7 +1812,7 @@ display: none;
 }
 
 .add-form button:hover {
-    background: var(--text-color);
+    background: var(--hover-color);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(124, 107, 161, 0.3);
 }
@@ -1830,7 +1840,7 @@ display: none;
 .add-staff-form h2,
 .delete-form h3 {
     text-align: center;
-    color:var(--text-color);
+    color:var(--h2-color);
     margin-bottom: 25px;
     font-weight: 700;
     position: relative;
@@ -1873,14 +1883,14 @@ display: none;
 }
 
 .checkbox-column label:hover {
-    background-color: var(--text-color);
+    background-color: var(--hover-color);
 }
 
 .checkbox-column img {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    border: 2px solidvar(--text-color);
+    border: 2px solid var(--hover-color);
     object-fit: cover;
 }
 
@@ -1908,7 +1918,7 @@ display: none;
 }
 
 .delete-form button:hover {
-    background-color: var(--text-color);
+    background-color: var(--hover-color);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(192, 57, 43, 0.3);
 }
@@ -1993,7 +2003,7 @@ display: none;
 }
 .skill-main {
   font-weight: bold;
-  background:var(--form-color);
+  background:white;
   padding: 10px 15px;
   margin: -15px -15px 15px -15px;
   border-radius: 8px 8px 0 0;
@@ -2021,7 +2031,7 @@ display: none;
   transition: 0.3s ease;
 }
 .add-staff-form button:hover {
-  background:var(--text-color);
+  background:var(--hover-color);
   transform: translateY(-2px);
 }
 .add-staff-form button:active {
@@ -2031,28 +2041,25 @@ display: none;
 .add-staff-form * {
   direction: ltr;
 }
-.service,
-.review,
+
 .faq-item,
 .add-service-container,
 .form-card,
 .application-form,
 .add-staff-form,
-.delete-form,
-.add-faq-form {
+.delete-form
+ {
   background: var(--form-color);
 }
-form input[type="text"],
-form input[type="number"],
-form input[type="email"],
-form input[type="password"],
-form input[type="file"],
-form textarea,
-form select {
-    background: var(--text-color);
+.add-faq-form,
+.service,
+.review{
+  background: var(--br2-color);
 }
-
-
+.file-box{
+  background-color: white;
+  color: black;
+}
 /*=============Responsive code=====================*/
 #menu-toggle {
   display: none;
