@@ -113,32 +113,42 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
-const body = document.body;
-const themeBtn = document.getElementById('themeToggle');
-const themeIcon = document.getElementById('themeIcon'); // 👈 مهم
+//======Dark/Light Theme===================
+document.addEventListener('DOMContentLoaded', function () {
+  const body = document.body;
+  const themeBtn = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
 
-const savedTheme = localStorage.getItem('theme');
+  if (!themeBtn || !themeIcon) return; 
+  function updateThemeIcon() {
+    if (body.classList.contains('dark-theme')) {
+      themeIcon.src = 'images/icons/sun.png';   
+      themeIcon.alt = 'Light mode';
+    } else {
+      themeIcon.src = 'images/icons/moon.png';  
+      themeIcon.alt = 'Dark mode';
+    }
+  }
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    body.classList.add('dark-theme');
+  }
 
-if (savedTheme === 'dark') {
-  body.classList.add('dark-theme');
-  if (themeIcon) themeIcon.src = 'images/sun.png';   // أيقونة الثيم الفاتح
-} else {
-  if (themeIcon) themeIcon.src = 'images/moon.png';  // أيقونة الثيم الداكن
-}
+  updateThemeIcon();
 
-if (themeBtn) {
-  themeBtn.addEventListener('click', () => {
+  themeBtn.addEventListener('click', function () {
     body.classList.toggle('dark-theme');
 
     if (body.classList.contains('dark-theme')) {
       localStorage.setItem('theme', 'dark');
-      if (themeIcon) themeIcon.src = 'images/icons/sun.png';   // إذا صار دارك نوري أيقونة الشمس
     } else {
       localStorage.setItem('theme', 'light');
-      if (themeIcon) themeIcon.src = 'images/icons/moon.png';  // إذا صار لايت نوري القمر
     }
+
+    updateThemeIcon();
   });
-}
+});
+
 
 
 // ===== Join the Team form validation (About Us) =====
