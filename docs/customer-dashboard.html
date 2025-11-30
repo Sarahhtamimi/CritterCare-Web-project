@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <meta charset="utf-8" >
+<meta name="viewport" content="width=device-width, initial-scale=1" >
+<title>Critter care - Customer dashboard</title> 
+<link rel="stylesheet" href="stylesheet.css">
+</head>
+<body><script src="script.js"></script>
+<header>
+<div class="logo">
+<img src="images/logo.white.png" alt="Critter care logo" width="90" height="90">
+<h1>Critter Care</h1>
+</div>
+<nav class=navi>
+  <input type ="checkbox" id="menu-toggle" />
+  <label for="menu-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+  </label>
+<ul class="nav-links">
+<li><a href="index.html">Home page</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="AboutUs.html">About us</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="customer-dashboard.html">Customer<br>dashboard</a></li>
+<li><a href="ServiceProviderDashboardPage.html">Service provider<br>dashboard</a></li>
+</ul>
+</nav>
+</header>
+
+<br>
+ <nav class="breadcrumbs">
+  <ol>
+    <li><a href="index.html">Home</a></li>
+    <li class="page">Customer Dashboard</li>
+   
+  </ol>
+</nav>
+<!-- ====== Page content ====== -->
+<main class="home-main" id="customer-dashboard">
+<h2 class="about-title">What would like to do?</h2>
+<h3 class="lead">Hey, you!</h3>
+
+<!-- Action cards -->
+<section class="actions">
+<a class="cards" href="request.html">
+<div class="cards-body">
+<img src="images/request.png" alt="Dog taking a shower" width="250">
+<h2>Request a service</h2>
+</div>
+</a>
+
+<a class="cards" href="evaluation.html">
+<div class="cards-body">
+<img src="images/evalution.png" alt="A happy dog" width="250">
+<h2>Rate a service</h2>
+</div>
+</a>
+</section>
+
+<!-- Previous requests table -->
+<section class="prev-request">
+  <div class="table-container">
+    <table class="request">
+<caption><h2 class="about-title">Previous requests</h2></caption>
+<!-- Heder of the table-->
+<thead>
+<tr>
+<th>Request #</th>
+<th>Service</th>
+<th>Date</th>
+<th>Cost</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<!-- First header-->
+<tr>
+<td class="number">1</td>
+<td>Grooming</td>
+<td><time datetime="2025-10-17">17-10-2025</time></td>
+<td>00.00 SAR</td>
+<td class="status declined">Declined</td>
+</tr>
+
+<tr>
+<td class="number">2</td>
+<td>Training</td>
+<td><time datetime="2025-09-28">28-9-2025</time></td>
+<td>00.00 SAR</td>
+<td class="status provided">Provided</td>
+</tr>
+<!-- Third header-->
+<tr>
+<td class="number">3</td>
+<td>Boarding</td>
+<td><time datetime="2026-01-09">9-1-2026</time>
+</td>
+<td>00.00 SAR</td>
+<td class="status declined">Declined</td>
+</tr>
+</tbody>
+</table>
+  </div>
+</section>
+</main>
+<!-- ===== end of my work ===== -->
+<footer>
+<div class="footer-left">
+<p>&reg; 2025 Critter care. All rights reserved.</p>
+</div>
+<!-- clock -->
+        <div class="footer-clock">
+            <span id="realTimeClock"></span>
+        </div>
+<div class="footer-right">
+ <h4>Contact Info</h4>
+<ul class="footer-list">
+<li><img src="images/icons/tele.png" alt="Telephone icon"><a href="tel:+966500000000">+966500000000</a></li>
+<li><img src="images/icons/email.png" alt="Email icon"><a href="mailto:critterCare@gmail.com">critterCare@gmail.com</a></li>
+<li><img src="images/icons/x.png" alt="X icon"><a href="https://x.com/CritterCare" target="_blank">Critter Care</a></li>
+</ul>
+</div>
+</footer>
+</body>
+</html>

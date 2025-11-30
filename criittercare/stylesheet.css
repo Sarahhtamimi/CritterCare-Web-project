@@ -1613,7 +1613,7 @@ h3.lead{
 }
 
 .cardProvider {
-    background: var(--br2-color);
+    background: white;
     padding: 0px 0px 10px 0px;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
@@ -1676,7 +1676,7 @@ h3.lead{
     display: block;
     width: 100px;
     height: 4px;
-    background-color:var(--titleUnderline);
+    background-color:#7C6BA1;
     margin: 15px auto 0;
     border-radius: 2px;
 }
@@ -1712,7 +1712,7 @@ h3.lead{
     display: block;
     width: 100px;
     height: 4px;
-    background-color: var(--titleUnderline);
+    background-color:#7C6BA1;
     margin: 15px auto 0;
     border-radius: 2px;
 
@@ -1721,8 +1721,7 @@ h3.lead{
     display: block;
     margin: 6px 0;
     font-size: 18px;
-    color: var(--text-color);
-}
+    color: black;}
 
 .add-form input[type="text"],
 .add-form input[type="file"]
@@ -1854,7 +1853,7 @@ display: none;
     display: block;
     width: 80px;
     height: 3px;
-    background-color:var(--titleUnderline) ;
+    background-color:#7C6BA1 ;
     margin: 10px auto 0;
     border-radius: 2px;
 }
@@ -2008,7 +2007,7 @@ display: none;
   padding: 10px 15px;
   margin: -15px -15px 15px -15px;
   border-radius: 8px 8px 0 0;
-  color:var(--form-color);
+  color:black;
 }
 .subskills input {
   width: 95%;

@@ -4,13 +4,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Critter Care</title> 
 <link rel="stylesheet" href="stylesheet.css">
-
-
 </head>
 <body>
-<header>
-
-
+ <script src="script.js"></script>
+ <header>
 <div class="logo">
 <img src="images/logo.white.png" alt="Critter care logo" width="90" height="90">
 <h1>Critter Care</h1>
@@ -32,57 +29,52 @@
 </ul>
 </nav>
 </header>
-
 <br>
 <!-- ===== breadcrumbs ===== -->
  <nav class="breadcrumbs">
   <ol>
     <li><a href="index.html">Home</a></li>
-    <li><a href="ServiceProviderDashboardPage.html">Service Provider Dashboard</a></li>
-    <li class="page">Add New Service</li>
+    <li class="page">Service Provider Dashboard</li>
    
   </ol>
 </nav>
+
 <!-- ====== Page Content ====== -->
 <main>
   <br>
   <br>
   <br>
+  <br>
+<section class="form-sectionProvider">
+  <h2 class="ProviderTitle">Current services</h2>
+ 
   
-<section class="add-service-container">
-  <h2 class="titleAdd">Add New Service</h2>
-  <form class="add-form" action="#" method="post">
+ 
+    <div class="gridProv" id="services-container">
+  <!-- Will be filled by JavaScript -->
+</div>
 
-    <div class="form-grid">
 
-      <div>
-        <label for="service-name">Service Name</label>
-        <input type="text" id="service-name" placeholder="Grooming...">
-      </div>
-
-      <div>
-        <label for="service-photo">Service Photo</label>
-        <label for="service-photo" class="file-box">Insert photo</label>
-        <input type="file" id="service-photo" style="display:none;">
-      </div>
-
-      <div class="full-row">
-        <label for="service-description">Service Description</label>
-        <textarea id="service-description" placeholder="Describe the service"></textarea>
-      </div>
-
-      <div>
-        <label for="service-price">Service Price</label>
-        <input type="number" id="service-price" placeholder="100.00 SAR">
-      </div>
-
-    </div>
-
-    <button type="submit" class="add-btn">Add Service</button>
-  </form>
 </section>
+<hr class="divider">
+<section class="form-sectionProvider">
+  <h2 class="ProviderTitle">Management</h2>
 
+  <div class="gridProv">
+    <a href="ManageStaffMembers.html" class="cardProvider">
+      <img src="images/Mannage.PNG" alt="Add new staff member">
+      <p>Manage staff members</p>
+    </a>
+    <a href="AddNewService.html" class="cardProvider">
+      <img src="images/addNew.PNG" alt="Add new service ">
+      <p>Add new service</p>
+    </a>
+  </div>
+</section>
 </main>
+
+
+
 
 <footer>
 <div class="footer-left">
@@ -101,6 +93,5 @@
 </ul>
 </div>
 </footer>
-<script src="script.js"></script>
 </body>
 </html>

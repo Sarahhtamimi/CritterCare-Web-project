@@ -1,16 +1,12 @@
 <!DOCTYPE html>
-<html>
-<head> <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Critter Care</title> 
+<html lang="en">
+<head> <meta charset="utf-8" >
+<meta name="viewport" content="width=device-width, initial-scale=1" >
+<title>Request service</title> 
 <link rel="stylesheet" href="stylesheet.css">
-
-
 </head>
-<body>
+<body><script src="script.js"></script>
 <header>
-
-
 <div class="logo">
 <img src="images/logo.white.png" alt="Critter care logo" width="90" height="90">
 <h1>Critter Care</h1>
@@ -31,59 +27,49 @@
 <li><a href="ServiceProviderDashboardPage.html">Service provider<br>dashboard</a></li>
 </ul>
 </nav>
-</header>
-
-<br>
-<!-- ===== breadcrumbs ===== -->
+</header><br>
  <nav class="breadcrumbs">
   <ol>
     <li><a href="index.html">Home</a></li>
-    <li><a href="ServiceProviderDashboardPage.html">Service Provider Dashboard</a></li>
-    <li class="page">Add New Service</li>
-   
+    <li><a href="customer-dashboard.html">Customer Dashboard</a></li>
+    <li class="page">Request service</li>
   </ol>
 </nav>
-<!-- ====== Page Content ====== -->
-<main>
-  <br>
-  <br>
-  <br>
-  
-<section class="add-service-container">
-  <h2 class="titleAdd">Add New Service</h2>
-  <form class="add-form" action="#" method="post">
+<!-- ====== You begin here! ====== -->
+<main id="request">
+<h2 class="about-title">How can we help?</h2>
+<p class="lead">Just complete the form and we’ll take care of everything</p>
+<form action="#" method="post" class="form-card" onsubmit="return validateRequest()">
+<fieldset>
+<legend>Service request form</legend>
 
-    <div class="form-grid">
+<label for="service">Select a service:</label><br>
+<select id="service" name="service">
+<option value="" disabled selected>Select service</option>
+<option value="groomig">Grooming</option>
+<option value="training">Training</option>
+<option value="boarding">Boarding</option>
+<option value="Veterninary-check-up">Veterninary check-up</option>
+</select><br><br>
 
-      <div>
-        <label for="service-name">Service Name</label>
-        <input type="text" id="service-name" placeholder="Grooming...">
-      </div>
+<label for="name">Your name:</label><br>
+<input type="text" id="name" name="Customer-name" placeholder="Customer’s name" ><br><br>
 
-      <div>
-        <label for="service-photo">Service Photo</label>
-        <label for="service-photo" class="file-box">Insert photo</label>
-        <input type="file" id="service-photo" style="display:none;">
-      </div>
+<label>Due date:</label><br>
+<input type="date" id="date" name="date" ><br><br>
 
-      <div class="full-row">
-        <label for="service-description">Service Description</label>
-        <textarea id="service-description" placeholder="Describe the service"></textarea>
-      </div>
+<label for="details">Request description:</label><br>
+<textarea name="entery" id="details" rows="4" cols="40"  placeholder="I would like to…"></textarea><br><br>
 
-      <div>
-        <label for="service-price">Service Price</label>
-        <input type="number" id="service-price" placeholder="100.00 SAR">
-      </div>
+<button type="submit" class="button">Submit</button>
+</fieldset>
 
-    </div>
 
-    <button type="submit" class="add-btn">Add Service</button>
-  </form>
-</section>
+</form>
+<section id="requestList"></section>
 
 </main>
-
+<!-- ===== end of my work ===== -->
 <footer>
 <div class="footer-left">
 <p>&reg; 2025 Critter care. All rights reserved.</p>
@@ -101,6 +87,5 @@
 </ul>
 </div>
 </footer>
-<script src="script.js"></script>
 </body>
 </html>

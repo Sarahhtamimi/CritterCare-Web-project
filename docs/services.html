@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Critter Care</title>
+<link rel="stylesheet" href="stylesheet.css">
+</head>
+<body class="services-body"><script src="script.js"></script>
+<header>
+<div class="logo">
+<img src="images/logo.white.png" alt="Critter care logo" width="90" height="90">
+<h1>Critter Care</h1>
+</div>
+<nav class=navi>
+  <input type ="checkbox" id="menu-toggle" />
+  <label for="menu-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+  </label>
+<ul class="nav-links">
+<li><a href="index.html">Home page</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="AboutUs.html">About us</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="customer-dashboard.html">Customer<br>dashboard</a></li>
+<li><a href="ServiceProviderDashboardPage.html">Service provider<br>dashboard</a></li>
+</ul>
+</nav>
+</header>
+<br>
+<nav class="breadcrumbs">
+<ol>
+<li><a href="index.html">Home</a></li>
+<li>Services</li>
+</ol>
+</nav>
+
+<main class="services-main">
+<section class="services-header">
+<h1>
+<img src="images/icons/star.png" alt="star" class="star-icon">
+Our Services
+<img src="images/icons/star.png" alt="star" class="star-icon">
+</h1>
+<p>Professional care for your beloved pets</p>
+</section>
+
+<section class="sorting-section">
+<div class="sort-container">
+<label for="sort-services">Sort Services:</label>
+<select id="sort-services" name="sort-services">
+<optgroup label="Price">
+<option value="price-low-high">Price: Low to High</option>
+<option value="price-high-low">Price: High to Low</option>
+</optgroup>
+<optgroup label="Name">
+<option value="name-a-z">Name: A to Z</option>
+<option value="name-z-a">Name: Z to A</option>
+</optgroup>
+</select>
+</div>
+</section>
+
+<section class="services-grid">
+<div class="service-card">
+<a href="customer-dashboard.html">
+<div class="service-image">
+<img src="images/serviceA.jpg" alt="Grooming Service">
+</div>
+<div class="service-info">
+<h3 class="service-name">Grooming</h3>
+<p class="service-description">Professional grooming services including bath, haircut, nail trimming, and ear cleaning to keep your pet looking and feeling their best.</p>
+<p class="service-price">Starting at 90 SAR</p>
+</div>
+</a>
+</div>
+
+<div class="service-card">
+<a href="customer-dashboard.html">
+<div class="service-image">
+<img src="images/serviceB.jpg" alt="Training Service">
+</div>
+<div class="service-info">
+<h3 class="service-name">Training</h3>
+<p class="service-description">Behavior and obedience training programs to help your pet develop good manners and social skills.</p>
+<p class="service-price">Starting at 170 SAR /session</p>
+</div>
+</a>
+</div>
+
+<div class="service-card">
+<a href="customer-dashboard.html">
+<div class="service-image">
+<img src="images/serviceC.jpg" alt="Boarding Service">
+</div>
+<div class="service-info">
+<h3 class="service-name">Boarding</h3>
+<p class="service-description">Safe and comfortable overnight stays with 24/7 supervision, regular exercise, and daily updates.</p>
+<p class="service-price">Starting at 135 SAR /night</p>
+</div>
+</a>
+</div>
+
+<div class="service-card">
+<a href="customer-dashboard.html">
+<div class="service-image">
+<img src="images/serviceD.jpg" alt="Veterinary Service">
+</div>
+<div class="service-info">
+<h3 class="service-name">Veterinary</h3>
+<p class="service-description">Comprehensive medical care including checkups, vaccinations, emergency services, and dental care.</p>
+<p class="service-price">Starting at 100 SAR /visit</p>
+</div>
+</a>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="footer-left">
+<p>&reg; 2025 Critter care. All rights reserved.</p>
+</div>
+<!-- clock -->
+        <div class="footer-clock">
+            <span id="realTimeClock"></span>
+        </div>
+<div class="footer-right">
+<h4>Contact Info</h4>
+<ul class="footer-list">
+<li><img src="images/icons/tele.png" alt="Telephone icon"><a href="tel:+966500000000">+966500000000</a></li>
+<li><img src="images/icons/email.png" alt="Email icon"><a href="mailto:critterCare@gmail.com">critterCare@gmail.com</a></li>
+<li><img src="images/icons/x.png" alt="X icon"><a href="https://x.com/CritterCare" target="_blank">Critter Care</a></li>
+</ul>
+</div>
+</footer>
+</body>
+</html>
