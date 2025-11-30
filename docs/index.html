@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home page</title>
+<link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+<header>
+<div class="logo">
+<img src="images/logo.white.png" alt="Critter care logo" width="90" height="90">
+<h1>Critter Care</h1>
+</div>
+<nav class=navi>
+  <input type ="checkbox" id="menu-toggle" />
+  <label for="menu-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+  </label>
+<ul class="nav-links">
+<li><a href="index.html">Home page</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="AboutUs.html">About us</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="customer-dashboard.html">Customer<br>dashboard</a></li> 
+<li><a href="ServiceProviderDashboardPage.html">Service provider<br>dashboard</a></li>
+</ul>
+</nav>
+<button id="themeToggle" class="theme-btn">
+  <img id="themeIcon" src="images/icons/moon.png" alt="Toggle theme" width="24" height="24">
+</button>
+
+</header>
+<script src="script.js"></script>
+<br>
+<nav class="breadcrumbs">
+<ol>
+<li>Home</li>
+</ol>
+</nav>
+
+<main class="home-main">
+
+<section class="vm-section">
+  
+<div id="V" class="vm-block">
+  <input type="checkbox" id="vm-vision-toggle" class="vm-toggle">
+
+  <label for="vm-vision-toggle"><h2>Vision</h2><span class="v-icon">+</span></label>
+<p>
+To create a welcoming space where pets receive the highest level of care, comfort, and respect. We aim to nurture the well-being of every animal we look after, building lasting trust with pet owners through our dedication and compassion.
+</p>
+</div>
+
+<div class="vm-divider"></div>
+
+<div id="M" class="vm-block">
+  <input type="checkbox" id="vm-mission-toggle" class="vm-toggle">
+
+
+  <label for ="vm-mission-toggle"><h2> Mission</h2><span class="v-icon">+</span></label>
+<p>
+We are committed to delivering professional, gentle, and attentive care that supports every pet's health and happiness. Our goal is to ensure that every visit feels safe, positive, and filled with genuine care, for both pets and their owners.</p>
+</div>
+</section>
+
+<hr class="divider">
+
+<section class="services-section">
+<h2 class="services-title">Our Services</h2>
+
+<div class="services-container">
+<div class="service">
+<a href="customer-dashboard.html">
+<div class="service-overview">
+<img src="images/serviceA.jpg" alt="Grooming service">
+<h3>Grooming</h3>
+<p>Basic grooming and hygiene</p>
+</div>
+<div class="service-hover-info">
+<h4>Service Details</h4>
+<ul>
+<li>Bathing &amp; blow drying</li>
+<li>Hair trimming</li>
+<li>Nail clipping</li>
+<li>Ear cleaning</li>
+</ul>
+<p class="price">Starting at 90 SAR</p>
+</div>
+</a>
+</div>
+
+<div class="service">
+<a href="customer-dashboard.html">
+<div class="service-overview">
+<img src="images/serviceB.jpg" alt="Training service">
+<h3>Training</h3>
+<p>Behavior and obedience</p>
+</div>
+<div class="service-hover-info">
+<h4>Service Details</h4>
+<ul>
+<li>Behavioral training</li>
+<li>Trick training</li>
+<li>Potty training</li>
+<li>Obedience training</li>
+</ul>
+<p class="price">Starting at 170 SAR /session</p>
+</div>
+</a>
+</div>
+
+<div class="service">
+<a href="customer-dashboard.html">
+<div class="service-overview">
+<img src="images/serviceC.jpg" alt="Boarding service">
+<h3>Boarding</h3>
+<p>Safe overnight stays</p>
+</div>
+<div class="service-hover-info">
+<h4>Service Details</h4>
+<ul>
+<li>24/7 supervision</li>
+<li>Comfortable bedding</li>
+<li>Regular exercise</li>
+<li>Daily updates &amp; photos</li>
+</ul>
+<p class="price">Starting at 135 SAR /night</p>
+</div>
+</a>
+</div>
+
+<div class="service">
+<a href="customer-dashboard.html">
+<div class="service-overview">
+<img src="images/serviceD.jpg" alt="Veterinary service">
+<h3>Veterinary</h3>
+<p>Medical care and checkups</p>
+</div>
+<div class="service-hover-info">
+<h4>Service Details</h4>
+<ul>
+<li>Health checkups</li>
+<li>Vaccinations</li>
+<li>Emergency care</li>
+<li>Dental services</li>
+</ul>
+<p class="price">Starting at 100 SAR /visit</p>
+</div>
+</a>
+</div>
+</div>
+</section>
+
+<section>
+<h3 class="reviews-title">From our customers:</h3>
+
+<div class="review">
+<div class="left">
+<img src="images/icons/profile.webp" class="avatar" alt="Customer profile picture">
+<div class="bubble">
+<strong>Leen Ahmed</strong>
+<span class="service-name">Grooming Service</span>
+<p>"My dog looks great after his grooming session! The staff was very gentle and professional."</p>
+</div>
+</div>
+<div class="stars">★★★★★</div>
+</div>
+
+<div class="review">
+<div class="left">
+<img src="images/icons/profile.webp" class="avatar" alt="Customer profile picture">
+<div class="bubble">
+<strong>Nourah Mohammad</strong>
+<span class="service-name">Training Service</span>
+<p>"Training sessions transformed my rescue bird's behavior. The trainers are patient and knowledgeable."</p>
+</div>
+</div>
+<div class="stars">★★★★★</div>
+</div>
+
+<div class="review">
+<div class="left">
+<img src="images/icons/profile.webp" class="avatar" alt="Customer profile picture">
+<div class="bubble">
+<strong>Rand Mohsen</strong>
+<span class="service-name">Boarding Service</span>
+<p>"Left my cat for a week. Received daily pictures and updates. She was happy and well-cared for!"</p>
+</div>
+</div>
+<div class="stars">★★★★☆</div>
+</div>
+</section>
+<hr class="divider">
+
+<section class="faq-section">
+<h2 class="faq-title">Frequently Asked Questions</h2>
+
+<div class="faq-container">
+<div class="faq-item">
+<input type="checkbox" id="faq1" class="faq-toggle">
+<label for="faq1" class="faq-question">
+<h3>What services do you offer for pets?</h3>
+<span class="faq-icon">+</span>
+</label>
+<div class="faq-answer">
+<p>We offer grooming, training, boarding, and veterinary services to keep your pets healthy, happy, and well-cared for.</p>
+</div>
+</div>
+
+<div class="faq-item">
+<input type="checkbox" id="faq2" class="faq-toggle">
+<label for="faq2" class="faq-question">
+<h3>How do I book an appointment?</h3>
+<span class="faq-icon">+</span>
+</label>
+<div class="faq-answer">
+<p>You can book appointments through our customer dashboard, by calling us directly, or by visiting our facility.</p>
+</div>
+</div>
+
+<div class="faq-item">
+<input type="checkbox" id="faq3" class="faq-toggle">
+<label for="faq3" class="faq-question">
+<h3>What are your operating hours?</h3>
+<span class="faq-icon">+</span>
+</label>
+<div class="faq-answer">
+<p>We're open Saturday to Thursday from 8:00 AM to 11:00 PM, and Fridays from 2:00 PM to 11:00 PM.</p>
+</div>
+</div>
+
+<div class="faq-item">
+<input type="checkbox" id="faq4" class="faq-toggle">
+<label for="faq4" class="faq-question">
+<h3>Do you offer emergency services?</h3>
+<span class="faq-icon">+</span>
+</label>
+<div class="faq-answer">
+<p>Yes, we provide emergency veterinary services 24/7. Please call our emergency line for immediate assistance.</p>
+</div>
+</div>
+
+<div class="faq-item">
+<input type="checkbox" id="faq5" class="faq-toggle">
+<label for="faq5" class="faq-question">
+<h3>Can I tour your facility before booking?</h3>
+<span class="faq-icon">+</span>
+</label>
+<div class="faq-answer">
+<p>Absolutely! You can schedule a touring visit by calling us. You can reach us through WhatsApp as well.</p>
+</div>
+</div>
+</div>
+
+<div class="faq-cta">
+<div class="faq-cta-content">
+<p class="faq-cta-text">Can't find your question?</p>
+<a href="faq.html" class="faq-cta-link">Visit Full FAQ →</a>
+</div>
+</div>
+
+
+
+</section>
+
+<button id="backToTop" class="back-to-top" aria-label="Back to Top">
+  ↑
+</button>
+
+</main>
+<footer>
+<div class="footer-left">
+<p>&reg; 2025 Critter care. All rights reserved.</p>
+ <!-- clock -->
+        <div class="footer-clock">
+            <span id="realTimeClock"></span>
+        </div>
+    </div>
+    <div class="footer-right">
+</div>
+<div class="footer-right">
+<h4>Contact Info</h4>
+<ul class="footer-list">
+<li><img src="images/icons/tele.png" alt="Telephone icon"><a href="tel:+966500000000">+966500000000</a></li>
+<li><img src="images/icons/email.png" alt="Email icon"><a href="mailto:critterCare@gmail.com">critterCare@gmail.com</a></li>
+<li><img src="images/icons/x.png" alt="X icon"><a href="https://x.com/CritterCare" target="_blank">Critter Care</a></li>
+</ul>
+</div>
+</footer>
+</body>
+</html>
