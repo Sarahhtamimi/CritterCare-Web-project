@@ -72,34 +72,7 @@
   </div>
 </section>
 </main>
-<script>
-document.addEventListener("DOMContentLoaded", function(){
 
-    let services = localStorage.getItem("services");
-    services = services ? JSON.parse(services) : [];
-
-    let box = document.getElementById("services-container");
-
-    if(services.length === 0){
-        box.innerHTML = "<p>No services added yet.</p>";
-        return;
-    }
-
-    services.forEach(function(s){
-        let div = document.createElement("div");
-        div.className = "cardProvider";
-
-        div.innerHTML = `
-            <img src="${s.photo}" alt="service img">
-            <p>${s.name}</p>
-            <p>${s.price} SAR</p>
-        `;
-
-        box.appendChild(div);
-    });
-
-});
-</script>
 
 
 
