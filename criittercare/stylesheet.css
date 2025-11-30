@@ -750,6 +750,7 @@ body{
 
 .faq-question:hover {
   background-color: var(--hover-color);
+  
 }
 
 .faq-question h3 {
@@ -2043,7 +2044,6 @@ display: none;
   direction: ltr;
 }
 
-.faq-item,
 .add-service-container,
 .form-card,
 .application-form,
@@ -2060,6 +2060,14 @@ display: none;
 .file-box{
   background-color: white;
   color: black;
+}
+
+
+
+/* make inner parts transparent so they don't create a second rectangle */
+.faq-question,
+.faq-answer {
+  background: transparent;
 }
 /*=============Responsive code=====================*/
 #menu-toggle {
