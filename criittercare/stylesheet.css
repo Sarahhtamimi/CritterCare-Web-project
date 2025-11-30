@@ -2009,7 +2009,7 @@ display: none;
   padding: 10px 15px;
   margin: -15px -15px 15px -15px;
   border-radius: 8px 8px 0 0;
-  color:var(--form-color);
+  color:black;
 }
 .subskills input {
   width: 95%;
@@ -2078,7 +2078,7 @@ display: none;
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
-  padding-right: 35px; /* تبعده عن الطرف */
+  padding-right: 35px; 
 }
 
 .hamburger span {
@@ -2185,8 +2185,8 @@ form label {
     max-width: 400px;
   }
   footer {
-    flex-direction: column;     /* كله يصير عمودي */
-    text-align: center;         /* النصوص تصير بالنص */
+    flex-direction: column;  
+    text-align: center;      
     gap: 20px;
     border-left: 0px solid;
      border-left: 2px solid;
@@ -2244,7 +2244,6 @@ form label {
     transition: transform 0.3s ease;
   }
 
-  /* النص يكون مخفي مبدئياً */
   .vm-block p {
     max-height: 0;
     overflow: hidden;
@@ -2258,11 +2257,10 @@ form label {
   
   .vm-toggle:checked + label + p {
     display: block;
-    max-height: 300px;      /* ارتفاع كافي للتمدد */
+    max-height: 300px;    
     padding: 10px 14px 14px;
   }
 
-  /* ونلف علامة + زي الـ FAQ */
   .vm-toggle:checked + label .v-icon {
     transform: rotate(45deg);
   }
