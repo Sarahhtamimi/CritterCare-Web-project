@@ -328,7 +328,7 @@ footer{
 
 .footer-right{
 	position: relative;
-	padding-left: 0px;
+	padding-left: 20px;
 	text-align: center;   
 	display: flex;
 	flex-direction: column;  
